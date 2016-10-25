@@ -8,8 +8,8 @@ package cst8288_group;
 public class Conductor extends Person {
 
 	/* CONSTRUCTORS	--------------------------------------------------	*/
-	public Conductor(String givenName, String middleName, String familyName, Address homeAddress) {
-		super(givenName, middleName, familyName, homeAddress);
+	public Conductor(String givenName, String middleName, String familyName, Address homeAddress, int phoneNumber) {
+		super(givenName, middleName, familyName, homeAddress, phoneNumber);
 		setConductorID(conductorID);
 	}
 
