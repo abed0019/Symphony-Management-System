@@ -167,5 +167,4 @@ public abstract class Person	{
 	private int phoneNumber;
 
 
-
 }	/*	End of CLASS:	Person.java			*/
