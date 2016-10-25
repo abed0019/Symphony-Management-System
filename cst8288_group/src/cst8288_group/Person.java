@@ -73,23 +73,43 @@ public abstract class Person	{
 		return name;
 	}
 
+	/**
+	 * Retrieves an Address Object containing a person's home address.
+	 * @return An Object of the Address class containing a person's home address.
+	 */
 	public Address getHomeAddress() {
 		return homeAddress;
 	}
 
 	/* MODIFIERS	-----------------------------------------------------	*/
+	/**
+	 * Sets the String containing a person's given name.
+	 * @param givenName String containing a person's given name.
+	 */
 	public void setGivenName(String givenName) {
 		this.givenName = givenName;
 	}
 
+	/**
+	 * Sets the String containing a person's middle name.
+	 * @param middleName String containing a person's middle name.
+	 */
 	public void setMiddleName(String middleName) {
 		this.middleName = middleName;
 	}
 
+	/**
+	 * Sets the String containing a person's family name.
+	 * @param familyName String containing a person's family name.
+	 */
 	public void setFamilyName(String familyName) {
 		this.familyName = familyName;
 	}
 
+	/**
+	 * Sets the Address Object containing a person's home address.
+	 * @param homeAddress An Object of the Address class containing a person's home address.
+	 */
 	public void setHomeAddress(Address homeAddress) {
 		this.homeAddress = homeAddress;
 	}
@@ -107,11 +127,26 @@ public abstract class Person	{
 
 
 	/* ATTRIBUTES	-----------------------------------------------------	*/
+	/**
+	 * A person's given name represented by a String.
+	 */
 	private String givenName;
+	
+	/**
+	 * A person's middle name represented by a String.
+	 */
 	private String middleName;
+	
+	/**
+	 * A person's family name represented by a String.
+	 */
 	private String familyName;
+	
+	/**
+	 * A person's home address represented by an Object of the Address class.
+	 */
 	private Address homeAddress;
 
 
 
-}	/*	End of CLASS:	Skeleton.java			*/
+}	/*	End of CLASS:	Person.java			*/

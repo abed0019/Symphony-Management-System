@@ -167,38 +167,32 @@ public class Address	{
 
 	/* ATTRIBUTES	-----------------------------------------------------	*/
 	/**
-	 * The street address of a person or place.
-	 * <br>Represented as a private String containing the street name, number, and, if applicable, the apartment or suite number.
+	 * The street address of a person or place represented as a private String.
 	 */
 	private String streetLine1;
 	
 	/**
-	 * Additional addressing information.
-	 * <br>Represented as a private String containing any additional addressing information required, such as apartment or suite number, department, or other.
+	 * Additional addressing information represented as a private String.
 	 */
 	private String additional;
 	
 	/**
-	 * The city name.
-	 * <br>Represented as a private String containing the city's name.
+	 * The city name represented as a private String
 	 */
 	private String city;
 	
 	/**
-	 * The province or state abbreviation.
-	 * <br>Represented by a private String containing the province or state's abbreviation.
+	 * The province or state abbreviation represented by a private String.
 	 */
 	private String province;
 	
 	/**
-	 * The postal or zip code.
-	 * <br>Represented by a private String containing the postal or zip code.
+	 * The postal or zip code represented by a private String.
 	 */
 	private String postalCode;
 	
 	/**
-	 * The country name.
-	 * <br>Represented by a private String containing the country name.
+	 * The country name represented by a private String.
 	 */
 	private String country;
 
