@@ -1,5 +1,13 @@
 package CST8288_group;
 
+/**
+ * ConcertManagement Class
+ * Manages the symphony orchestra from scheduling concert event, booking venues, 
+ * hiring employees (conductors, soloist, composers, etc.), selling concert tickets.
+ * 
+ * @author    My My Ngo
+ * @version   1.0.0 October 26, 2016
+ */
 public class ConcertManagement {
 
 	/* CONSTRUCTORS	--------------------------------------------------	*/
