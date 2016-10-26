@@ -15,12 +15,13 @@ public abstract class Person	{
 	 * @param familyName	String containing the family (last) name of a person.
 	 * @param homeAddress	String containing the home address of a person.
 	 */
-	public Person(String givenName, String middleName, String familyName, Address homeAddress, int phoneNumber) {
+	public Person(String givenName, String middleName, String familyName, Address homeAddress, int phoneNumber, int id) {
 		setGivenName(givenName);
 		setMiddleName(middleName);
 		setFamilyName(familyName);
 		setHomeAddress(homeAddress);
 		setPhoneNumber(phoneNumber);
+		setID(id);
 	}
 
 	/* ACCESSORS	-----------------------------------------------------	*/
@@ -73,8 +74,16 @@ public abstract class Person	{
 	 * Retrieves an integer representing a person's phone number.
 	 * @return Integer containing a person's phone number.
 	 */
-	public int phoneNumber() {
+	public int getPhoneNumber() {
 		return phoneNumber;
+	}
+	
+	/**
+	 * Retrieves an integer representing a person's phone number.
+	 * @return Integer containing a person's identification number.
+	 */
+	public int getID() {
+		return id;
 	}
 
 	/* MODIFIERS	-----------------------------------------------------	*/
@@ -117,6 +126,10 @@ public abstract class Person	{
 	public void setPhoneNumber(int phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
+	
+	public void setID(int id) {
+		this.id = id;
+	}
 
 	/*	NORMAL BEHAVIOR -------------------------------------------------	*/
 
@@ -155,6 +168,11 @@ public abstract class Person	{
 	 * A person's phone number represented by an integer value.
 	 */
 	private int phoneNumber;
+	
+	/**
+	 * A person's identification number represented by an integer value.
+	 */
+	private int id;
 
 
 }	/*	End of CLASS:	Person.java			*/

@@ -8,31 +8,22 @@ package cst8288_group;
 public class Conductor extends Person {
 
 	/* CONSTRUCTORS	--------------------------------------------------	*/
-	public Conductor(String givenName, String middleName, String familyName, Address homeAddress, int phoneNumber) {
-		super(givenName, middleName, familyName, homeAddress, phoneNumber);
-		setConductorID(conductorID);
+	public Conductor(String givenName, String middleName, String familyName, Address homeAddress, int phoneNumber, int id) {
+		super(givenName, middleName, familyName, homeAddress, phoneNumber, id);
 	}
 
 
 	/* ACCESSORS	-----------------------------------------------------	*/
-	public int getConductorID() {
-		return this.conductorID;
-	}
 
 
 	/* MODIFIERS	-----------------------------------------------------	*/
-	public void setConductorID(int conductorID) {
-		this.conductorID = conductorID;
-	}
 
 
 	/*	NORMAL BEHAVIOR -------------------------------------------------	*/
-	/* TODO:	Place public behavior here.											*/
 
 
 
 	/* HELPER METHODS	--------------------------------------------------	*/
-	/* TODO:	Place helper methods here.												*/
 
 
 
@@ -41,7 +32,6 @@ public class Conductor extends Person {
 
 
 	/* ATTRIBUTES	-----------------------------------------------------	*/
-	int conductorID;
 
 
 
