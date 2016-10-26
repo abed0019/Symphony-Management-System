@@ -5,7 +5,7 @@ import java.util.GregorianCalendar;
 
 /**
  * Description of this class.
- * @author    Name
+ * @author    Kathleen McNulty
  * @version   1.0.0 Date
  */
 public class ConcertSeason	{
