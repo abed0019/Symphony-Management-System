@@ -1,4 +1,4 @@
-package CST8288_group;
+package cst8288_group;
 
 /**
  * ConcertManagement Class
