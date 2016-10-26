@@ -6,7 +6,7 @@ package cst8288_group;
  * @author    Chase Thorne
  * @version   1.0.0 October 25, 2016
  */
-
+/*rwar
 public class Address	{
 
 	/* CONSTRUCTORS	--------------------------------------------------	*/
