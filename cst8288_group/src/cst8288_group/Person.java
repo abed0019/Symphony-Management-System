@@ -23,16 +23,6 @@ public abstract class Person	{
 		setPhoneNumber(phoneNumber);
 	}
 
-	/**
-	 * Overloaded constructor for the Person abstract class to set a person's given, family name, home address, and phone number.
-	 * @param givenName		String containing the given (first) name of a person.
-	 * @param familyName	String containing the family (last) name of a person.
-	 * @param homeAddress	String containing the home address of a person.
-	 */
-	public Person(String givenName, String familyName, Address homeAddress, int phoneNumber) {
-		this(givenName, null, familyName, homeAddress, phoneNumber);
-	}
-
 	/* ACCESSORS	-----------------------------------------------------	*/
 	/**
 	 * Retrieves a String containing the person's given name.
