@@ -27,7 +27,7 @@ public class Soloist extends Person {
 	
 	public Soloist (String givenName, String middleName, String familyName, Address homeAddress, int phoneNumber) {
 		
-		super(givenName, middleName, familyName, homeAddress, phoneNumber);
+		super(givenName, middleName, familyName, homeAddress, phoneNumber, phoneNumber);
 		
 		setSoloistID(soloistID);
 		
@@ -70,7 +70,14 @@ public class Soloist extends Person {
 		return this.expertise;
 		
 	}
+	
+	
 
+	/**
+	 * 
+	 *  Returns soloist's last performed date
+	 * 
+	 */
 	
 	
 	
@@ -98,6 +105,17 @@ public class Soloist extends Person {
 	public void setSoloistExpertise ( String expt){
 		
 		this.expertise = expt;
+		
+	}
+	
+	/**
+	 * Sets soloist's last performed date 
+	 * 
+	 */
+	
+	
+	public void setLastPerformed ( int day, int month, int year){
+		
 		
 	}
 
