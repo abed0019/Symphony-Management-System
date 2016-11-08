@@ -11,7 +11,7 @@ import java.util.ArrayList;
  * @author    Ash-Lee Hommy
  * @version   1.0.0 October 23rd, 2016
  */
-public class Composition	{
+public class Composition extends ConcertEntity{
 
 	/* CONSTRUCTORS	--------------------------------------------------	*/
 	/**
@@ -27,8 +27,8 @@ public class Composition	{
 	 * @param composer the Composer of the Composition
 	 */
 	public Composition(String id, String name, String composer) {
-		setCompositionID(id);
-		setCompositionName(name);
+		setID(id);
+		setName(name);
 		setComposer(composer);
 		movementList = new ArrayList<Movement>();
 	}
@@ -40,8 +40,8 @@ public class Composition	{
 	 * @param movements the list of Movements within the Composition
 	 */
 	public Composition(String id, String name, String composer, ArrayList<Movement> movements) {
-		setCompositionID(id);
-		setCompositionName(name);
+		setID(id);
+		setName(name);
 		setComposer(composer);
 		setMovementList(movements);
 		
@@ -51,14 +51,14 @@ public class Composition	{
 	/**
 	 * Composition ID getter method
 	 * @return the Composition ID as a String
-	 */
+	 
 	public String getCompositionID() {
 		return compositionID;
 	}
 	/**
 	 * Composition name getter method
 	 * @return the Composition name as a String
-	 */
+	 
 	public String getCompositionName() {
 		return compositionName;
 	}
@@ -82,14 +82,14 @@ public class Composition	{
 	/**
 	 * Composition ID setter method - sets id with a String parameter
 	 * @param id the Composition identifier (combination of letters and numbers)
-	 */
+	 
 	public void setCompositionID(String id) {
 		compositionID = id;
 	}
 	/**
 	 * Composition name setter method - sets name with String parameter
 	 * @param name the Composition name
-	 */
+	 
 	public void setCompositionName(String name) {
 		compositionName = name;
 	}
@@ -117,8 +117,8 @@ public class Composition	{
 	@Override
 	public String toString() {
 		return "[ " 
-				+ "compositionID=" + getCompositionID() 
-				+ " compositionName=" + getCompositionName()
+				+ "compositionID=" + getID() 
+				+ " compositionName=" + getName()
 				+ " composer=" + getComposer()
 				+ " movementList=" + getMovementList()
 				+ " ]";
@@ -128,9 +128,7 @@ public class Composition	{
 
 	/* HELPER METHODS	--------------------------------------------------	*/
 	/* TODO:	Place helper methods here.												*/
-
-
-
+	
 	/*	ENTRY POINT for STAND-ALONE OPERATION ---------------------------	*/
 	/**
 	 * Entry point "main()" as required by the JVM. Invoked first and
@@ -159,18 +157,17 @@ public class Composition	{
 	}
 
 
-
 	/* ATTRIBUTES	-----------------------------------------------------	*/
 	/**
 	 * The ID of the Composition, as set by the Composer
 	 * <br>Represented as a private String
 	 */
-	private String compositionID;
+	//private String compositionID;
 	/**
 	 * The name of the Composition, as set by the Composer
 	 * <br>Represented as a private String
 	 */
-	private String compositionName;
+	//private String compositionName;
 	/**
 	 * The composer of the Composition (may be a Class or type of Person?)
 	 * <br>TODO figure out what the composer is
