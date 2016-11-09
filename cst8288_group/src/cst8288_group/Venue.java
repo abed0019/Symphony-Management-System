@@ -76,7 +76,7 @@ public class Venue	{
 	 */
 	public void setMaxCapacity(int maxCapacity)
 	{
-		this.maxCapacity = maxCapacityn;
+		this.maxCapacity = maxCapacity;
 	}
 
 
