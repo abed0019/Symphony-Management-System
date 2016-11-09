@@ -27,9 +27,9 @@ public class Soloist extends Person {
 	
 	
 
-	public Soloist (String givenName, String middleName, String familyName, Address homeAddress, int phoneNumber, int id) {
+	public Soloist (Name name, Address homeAddress, PhoneNumber phoneNumber, String id) {
 		
-		super(givenName, middleName, familyName, homeAddress, phoneNumber, id);
+		super(name, homeAddress, phoneNumber, id);
 		
 		setSoloistID(soloistID);
 		
