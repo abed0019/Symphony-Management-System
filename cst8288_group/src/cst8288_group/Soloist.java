@@ -25,9 +25,11 @@ public class Soloist extends Person {
 	
 	/* CONSTRUCTORS	--------------------------------------------------	*/
 	
-	public Soloist (String givenName, String middleName, String familyName, Address homeAddress, int phoneNumber) {
+	
+
+	public Soloist (String givenName, String middleName, String familyName, Address homeAddress, int phoneNumber, int id) {
 		
-		super(givenName, middleName, familyName, homeAddress, phoneNumber, phoneNumber);
+		super(givenName, middleName, familyName, homeAddress, phoneNumber, id);
 		
 		setSoloistID(soloistID);
 		
@@ -80,6 +82,12 @@ public class Soloist extends Person {
 	 */
 	
 	
+	public Date getlastPerformedDate(){
+		
+		return this.getlastPerformedDate();
+		
+	}
+	
 	
 	
 	/* MODIFIERS	-----------------------------------------------------	*/
@@ -114,11 +122,12 @@ public class Soloist extends Person {
 	 */
 	
 	
-	public void setLastPerformed ( int day, int month, int year){
-		
-		
+	public void setLastPerformedDate(Date lastPerformedDate){
+		 this.lastPerformedDate = lastPerformedDate;
 	}
 
+	
+	
 	
 	
 	
@@ -159,6 +168,8 @@ public class Soloist extends Person {
 	private String soloistID;
 	
 	private String expertise;
+	
+	private Date lastPerformedDate;
 
 
 }	/*	End of CLASS:	*/
