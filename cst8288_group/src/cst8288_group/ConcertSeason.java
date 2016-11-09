@@ -15,7 +15,7 @@ public class ConcertSeason	{
 	public ConcertSeason(){
 		
 	}
-	public ConcertSeason(GregorianCalendar openingDate, int length, ArrayList<Concert> concertList){
+	public ConcertSeason(Date openingDate, int length, ArrayList<Concert> concertList){
 		this.openingDate=openingDate; 
 		this.length=length; 
 		this.concertList=concertList; 
@@ -24,7 +24,7 @@ public class ConcertSeason	{
 
 	/* ACCESSORS	-----------------------------------------------------	*/
 	/* TODO:	Place accessors here.													*/
-	public GregorianCalendar getOpeningDate(){
+	public Date getOpeningDate(){
 		return openingDate;
 	}
 	public ArrayList<Concert>getConcertList(){
@@ -39,7 +39,7 @@ public class ConcertSeason	{
 	/* MODIFIERS	-----------------------------------------------------	*/
 	/* TODO:	Place modifier/mutator methods here.	
 	 							*/
-	public void setOpeningDate(GregorianCalendar openingDate){
+	public void setOpeningDate(Date openingDate){
 		this.openingDate=openingDate; 
 	}
 	public void setLength(int length){
@@ -60,7 +60,7 @@ public class ConcertSeason	{
 
 
 	/* ATTRIBUTES	-----------------------------------------------------	*/
-	public GregorianCalendar openingDate;
+	public Date openingDate;
 	private ArrayList<Concert>concertList;
 	private int length; 
 
