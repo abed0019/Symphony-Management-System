@@ -1,7 +1,7 @@
 package cst8288_group;
 
 /**
- * Person is an abstract class that contains the most basic information about an individual.
+ * Person is a class that contains the most basic information about an individual.
  * @author    Chase Thorne
  * @version   1.0.1 November 8, 2016
  */
@@ -9,7 +9,7 @@ public class Person	{
 
 	/* CONSTRUCTORS	--------------------------------------------------	*/
 	/**
-	 * Overloaded constructor for the Person abstract class to set a person's name, home address, phone number, and identification.
+	 * Overloaded constructor for the Person class to set a person's name, home address, phone number, and identification.
 	 * @param name			Name object containing the name of a person.
 	 * @param homeAddress	String containing the home address of a person.
 	 * @param phoneNumber	PhoneNumber object containing the person's phone number.
