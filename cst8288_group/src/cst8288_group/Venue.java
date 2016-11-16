@@ -8,7 +8,7 @@ package cst8288_group;
  * @version   1.0.0	2016-10-26
  */
 
-public class Venue	{
+public class Venue	extends ConcertEntity{ //shoudld extend concertEntity
 
 	/* CONSTRUCTORS	--------------------------------------------------	*/
 	public Venue()
@@ -25,7 +25,7 @@ public class Venue	{
 	public Venue(Address location, String locationName, int maxCapacity)
 	{
 		this.location = location;
-		this.locationName = locationName;
+		setName(locationName);
 		this.maxCapacity = maxCapacity;
 	}
 
@@ -41,10 +41,7 @@ public class Venue	{
 	/**
 	 * @return String containing the venue name
 	 */
-	public String getLocationName()
-	{
-		return locationName;
-	}
+	
 	
 	/**
 	 * @return int representing the maximum capacity of the venue
@@ -52,6 +49,13 @@ public class Venue	{
 	public int getMaxCapacity()
 	{
 		return maxCapacity;
+	}
+	/**
+	 * @return int represents the total tickets sold for a particular venue
+	 */
+	public int getTotalTicketSale()
+	{
+		return totalTicketSale;
 	}
 
 	/* MODIFIERS	-----------------------------------------------------	*/
@@ -66,10 +70,7 @@ public class Venue	{
 	/**
 	 * @param locationName The name of the venue
 	 */
-	public void setLocationName(String locationName)
-	{
-		this.locationName = locationName;
-	}
+	
 	
 	/**
 	 * @param maxCapacity The maximum capacity of the venue
@@ -78,7 +79,15 @@ public class Venue	{
 	{
 		this.maxCapacity = maxCapacity;
 	}
-
+	/**
+	 * 
+	 * @param totalTicketSale Total number of tickets sold for a particular venue
+	 */
+	public void setTotalTicketSale(int totalTicketSale)
+	{
+		this.totalTicketSale = totalTicketSale;
+	}
+	
 
 	/*	NORMAL BEHAVIOR -------------------------------------------------	*/
 	/**
@@ -86,7 +95,7 @@ public class Venue	{
 	 */
 	public String toString()
 	{
-		return  "Venue: " + this.getLocationName() + 
+		return  "Venue: " + super.getName() + 
 				" Address: " + this.getLocation() + 
 				" Max capacity: " + this.getMaxCapacity();
 	}
@@ -109,7 +118,10 @@ public class Venue	{
 	 * The maximum capacity of the venue
 	 */
 	private int maxCapacity;
-
+	/**
+	 * Total ticket sales for a particular venue
+	 */
+	private int totalTicketSale;
 
 
 }	/*	End of CLASS:	Venue.java			*/
