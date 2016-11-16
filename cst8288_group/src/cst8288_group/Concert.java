@@ -26,15 +26,17 @@ public class Concert {
 
 	//private static final String concertNumber = "concert123";
 	String concertNumber = "concert123";
+	java.sql.Timestamp timeStamp;
 	//Date date;
-	ConcertDate concertDate;
 	SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");  //2016/Jan/13
 	//private ArrayList<Date> concertDateList = new ArrayList<Date>();
 
 	public Concert(String concertNumber){
 		setConcertNumber(concertNumber);	
-		concertDate = new ConcertDate();
+		timeStamp = new java.sql.Timestamp(new java.util.Date().getTime());
+
 		//concertDateList.add(date = new Date());
+		
 	}
 
 
