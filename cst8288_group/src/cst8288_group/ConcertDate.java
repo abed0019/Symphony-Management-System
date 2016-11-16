@@ -6,48 +6,51 @@ package cst8288_group;
 * @author    My My Ngo
 * @version   1.0.0 October 25, 2016
 */
-public class ConcertDate extends Date {
+import java.util.*;
+import java.util.Date;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+
+public class ConcertDate {
+
+	/*  2016/11/14 16:06:54  */
+	SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm"); 
+	Calendar concertDate;
+	Date date;
 	
+
 	/* CONSTRUCTORS	--------------------------------------------------	*/
 	/**
 	 * Default constructor for ConcertDate
 	 */
-	public ConcertDate() {
-		super();  	
-	}
+	public ConcertDate() { 		concertDate = Calendar.getInstance();  	}
 	
-	/**
-	 * Overloaded constructor for adding concert time and getting the date of the concert
-	 * @param time of the concert show as an integer
-	 */
-	public ConcertDate(int time) {
-		super();  
-		this.setTime(time);			
-	}
-	
+		
 	/* ACCESSORS	-----------------------------------------------------	*/
 	/**
-	 * Time getter method
-	 * @return concert time as an Integer
+	 * Concert date getter method
+	 * @return concert date as a String
 	 */
-	public int getTime() {
-		return time;
+	public Calendar getDate(){
+		return concertDate;
 	}
+	
 
 	/* MODIFIERS	-----------------------------------------------------	*/
 	/**
-	 * Time setter method - set time of concert with an integer parameter
-	 * @param time as an integer 
+	 * Concert date setter method - set time of concert with an integer parameter
+	 * @param concert date and time 
 	 */
-	public void setTime(int time) {
-		this.time = time;
+	public void setDate(){
+		concertDate.setTime(date);  //set date and time
 	}
+	public void setDate(int year, int month, int day, int hh, int mm){
+		concertDate = new GregorianCalendar(year, month, day, hh, mm);
+	}
+	 
 
 	/* ATTRIBUTES	-----------------------------------------------------	*/
-	/**
-	 * time of when the concert begins as a private integer
-	 */
-	private int time;
+	
 	
 	
 }/*	End of CLASS:	ConcertDate.java			*/
