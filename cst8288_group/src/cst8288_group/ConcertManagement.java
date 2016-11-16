@@ -8,77 +8,144 @@ package cst8288_group;
  * @author    My My Ngo
  * @version   1.0.0 October 26, 2016
  */
-public class ConcertManagement {
+
+package cst8288_group;
+
+import java.util.*;
+import java.util.Date;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+
+/**
+* Concert Management Class
+* @author    My My Ngo
+* @version   1.0.0 October 25, 2016
+*/
+
+public class ConcertManagement2 {
+	
+	Venue venue;
+	ConcertSeason season;
+	Concert concert;
+	Conductor conductor;  
+	Soloist soloist;  
+	Composition composition; 
+	FinancialTransation finance;  
+
 
 	/* CONSTRUCTORS	--------------------------------------------------	*/
 	/**
 	 * Default constructor for ConcertManagement
 	 */
-	public ConcertManagement(){
-		
+	public ConcertManagement2(){
+		//create all the objects
+		venue = new Venue();
+		concertSeason = new ConcertSeason();
+		concert = new Concert() ;
+		conductor = new Conductor();  
+		soloist = new Soloist();  
+		composition = new Composition() ; 
+		finance = new FinancialTransation();  
+
 	}//end ConcertManagement
 	
-	/* Concert Class
-	 **********************************/
-	//checkConcertCriteria();
-	//verifyScheduleExist();
-	//verifyConcertDateExist();
-	//verifyConductorExist();
-	//verifyCompositionExist();
-	
-	/* Committee Class => Employment Class
-	 **********************************/
-	//employConductor();
-	//employSoloist();
-	//employComposer();
+	/*public Movement(String movName, int movNum) {
+		setMovementNumber(movNum);
+		setMovementName(movName);
+		setMovementID(movName + movNum);
+	}*/
 	
 	
-	/* ConcertSeason Class
-	 **********************************/
-	//createConcertSchedule();
-	//addVenue();
-	//addConcert();
-	//
-	
-	
-	
-	/*public boolean checkConcertCriteria(){
-		boolean criteriaComplete = false;
-		
-		if ((openingDate_exist == true) && (venue_exist == true) && (conductor_exist == true) &&
-			(soloist_exist == true)){
-			criteriaComplete = true;
-			System.out.println("All concert criteria complete.");
-		}//end if
-		
-		if (openingDate_exist == false){
-			//call ConcertSeason class
-			System.out.println("Concert Season not scheduled.");
-		}
-		
-		if (venue_exist == false){
-			//call Venue class
-			System.out.println("No venue available.");
-		}
-		
-		if(conductor_exist == false){
-			//call Conductor class
-			System.out.println("No conductor available.");
-		}
-		
-		if(soloist_exist == false){
-			//call Soloist class
-			System.out.println("No soloist available.");
-		}		
-	}//end checkConcertCriteria()
-*/	
-	public static void main(String[] args) {
-		boolean concertApproved;
-		
-		//concertApproved = checkConcertCriteria();
-		
-		/*Invoice invoice = new Invoice();
-		invoice.setMinutesFromUser();*/
-	}
+	/**
+	*   Checks if a venue has been rented.
+	****/
+	public boolean venueExist () { 	}
 
-}
+	/**
+	*   Checks if an open date has been set (available)
+	****/
+	public boolean openingDateExist () { 	}
+
+	/**
+	*   Checks if a conductor will be at the concert.  Mandatory to have at least one conductor at the     
+	*   orchestra.
+	****/
+	public boolean conductorExist (){ 	}
+
+
+	public static void main(String[] args) {  	}
+	
+	/**
+	*   Checks if a soloist will be at the concert.  
+	.****/
+	public boolean soloistExist () {
+
+	}//end soloistExist ()
+
+	/**
+	*   Checks if a composer will be at the concert.  
+	.****/
+	public boolean composerExist (){
+
+	}//end composerExist ()
+
+	/**
+	*   Identify how many musicians are performing at a concert
+	****/
+	public int musiciansPerConcert(Conductor conductor, Soloist soloist, Composition composer) {
+	}//end musiciansPerConcert()
+
+	 
+	/**
+	*   Schedule a concert under a concert season.  
+	****/	
+	public void scheduleConcert () ) {
+		Date openingDate = new Date() ;
+		Int length = 10;
+		ArrayList<Concert> concertList = new Concert() ;
+	ArrayList<Venue> venueList = new Venue() ;
+	 	concertSeason.(openingDate, length, concertList, venueList); 
+	concertSeason.addVenue();
+	concertSeason.addConcert();
+	}//end scheduleConcert ()
+
+	/**
+	*   Search for a specific concert in a concert season, including date, venue name and location.
+	****/	
+	public void findConcert(ConcertSeason season) {
+
+	}//end findConcert ()
+
+	/**
+	*    Displays all the available dates for a particular concert
+	****/	
+	public void concertDatePerformances (Concert concert) {
+
+	}//end concertDatePerformances ()
+
+	/**
+	*   Access to the list of compositions at a concert
+	****/	
+	public void numberOfCompositionPerConcert(ConcertSeason season, 
+            Concert concert, Composition composition) {
+
+	}//end numberOfCompositionPerConcert ()
+
+
+		/* ACCESSORS	-----------------------------------------------------	*/
+		/**
+		 * Getter
+		 */
+		
+		
+		/* MODIFIERS	-----------------------------------------------------	*/
+		/**
+		 * Setter
+		 */
+		 
+
+		/* ATTRIBUTES	-----------------------------------------------------	*/
+		
+
+
+}/*	End of CLASS:	ConcertManagement.java			*/
