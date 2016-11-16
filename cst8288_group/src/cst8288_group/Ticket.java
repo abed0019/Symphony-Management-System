@@ -7,7 +7,7 @@ public class Ticket {
 	public Ticket(String ticketType, int ticketprice){
 		this.ticketprice=ticketprice; 
 		this.tickettype=ticketType;
-
+		ticketID = UniqueID.getInstance();
 	}
 	public Ticket(){}
 
@@ -67,5 +67,13 @@ public class Ticket {
 	private String tickettype;
 	private double ticketprice;
 	private Integer ticketID; 
-	Venue venue=new Venue(); 
+	Venue venue=new Venue();
+	
+	private static class UniqueID{
+		private static int uid = 0;
+		public static int getInstance(){
+			uid++;
+			return uid;
+		}
+	}
 }
