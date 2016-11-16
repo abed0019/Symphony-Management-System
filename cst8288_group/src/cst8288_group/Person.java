@@ -15,11 +15,11 @@ public class Person extends ConcertEntity	{
 	 * @param phoneNumber	PhoneNumber object containing the person's phone number.
 	 * @param id			String containing the person's identification.
 	 */
-	public Person(Name name, Address homeAddress, PhoneNumber phoneNumber, String id) {
+	public Person(Name name, Address address, PhoneNumber phoneNumber, String id) {
+		super.setID(id); // should use constructor?
 		setName(name);
-		setHomeAddress(homeAddress);
+		setAddress(address);
 		setPhoneNumber(phoneNumber);
-		setID(id);
 	}
 
 	/* ACCESSORS	-----------------------------------------------------	*/
@@ -37,8 +37,8 @@ public class Person extends ConcertEntity	{
 	 * Retrieves an Address Object containing a person's home address.
 	 * @return An Object of the Address class containing a person's home address.
 	 */
-	public Address getHomeAddress() {
-		return homeAddress;
+	public Address getAddress() {
+		return address;
 	}
 	
 	/**
@@ -48,14 +48,7 @@ public class Person extends ConcertEntity	{
 	public PhoneNumber getPhoneNumber() {
 		return phoneNumber;
 	}
-	
-	/**
-	 * Retrieves an integer representing a person's phone number.
-	 * @return Integer containing a person's identification number.
-	 */
-	public String getID() {
-		return id;
-	}
+
 
 	/* MODIFIERS	-----------------------------------------------------	*/
 	/**
@@ -70,8 +63,8 @@ public class Person extends ConcertEntity	{
 	 * Sets the Address Object containing a person's home address.
 	 * @param homeAddress An Object of the Address class containing a person's home address.
 	 */
-	public void setHomeAddress(Address homeAddress) {
-		this.homeAddress = homeAddress;
+	public void setAddress(Address address) {
+		this.address = address;
 	}
 	
 	/**
@@ -80,14 +73,6 @@ public class Person extends ConcertEntity	{
 	 */
 	public void setPhoneNumber(PhoneNumber phoneNumber) {
 		this.phoneNumber = phoneNumber;
-	}
-	
-	/**
-	 * Sets the String containing a person's identification number.
-	 * @param id
-	 */
-	public void setID(String id) {
-		this.id = id;
 	}
 
 	/*	NORMAL BEHAVIOR -------------------------------------------------	*/
@@ -111,7 +96,7 @@ public class Person extends ConcertEntity	{
 	/**
 	 * A person's home address represented by an Object of the Address class.
 	 */
-	private Address homeAddress;
+	private Address address;
 	
 	/**
 	 * A person's phone number represented by a PhoneNumber object.
