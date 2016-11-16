@@ -5,7 +5,7 @@ package cst8288_group;
  * @author    Chase Thorne
  * @version   1.0.1 November 8, 2016
  */
-public class Person	{
+public class Person extends ConcertEntity	{
 
 	/* CONSTRUCTORS	--------------------------------------------------	*/
 	/**
@@ -28,6 +28,7 @@ public class Person	{
 	 * Retrieves a Name object containing a person's name.
 	 * @return
 	 */
+	@Override
 	public Name getName() {
 		return name;
 	}

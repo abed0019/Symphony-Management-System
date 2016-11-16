@@ -17,7 +17,7 @@ public abstract class ConcertEntity {
 	 * Name getter method
 	 * @return the name as a String
 	 */
-	protected String getName() {
+	protected Object getName() {
 		return name;
 	}
 	/**
