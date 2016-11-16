@@ -8,27 +8,77 @@ package cst8288_group;
  */
 
 public class Address	{
-
-	/* CONSTRUCTORS	--------------------------------------------------	*/
-	/**
-	 * Overloaded constructor for the Address class to set the street address, additional addressing, city, province, postal code, and country.
-	 * @param streetLine1		A String containing the street name, number, and, if applicable, apartment or suite number.
-	 * @param streetLine2	A String containing additional addressing information required, such as apartment, suite, room, department, or other.
-	 * @param city			A String containing the city name.
-	 * @param province		A String containing the abbreviated province or state name.
-	 * @param postalCode	A String containing the postal or zip code.
-	 * @param country		A String containing the country name.
-	 */
-	public Address(String streetLine1, String streetLine2, String city, String province, String postalCode, String country) {
-		setStreetLine1(streetLine1);
-		setStreetLine2(streetLine2);
-		setCity(city);
-		setProvince(province);
-		setPostalCode(postalCode);
-		setCountry(country);
+	
+	public static class Builder {
+		
+		//required parameters
+		private String streetLine1;
+		private String city;
+		private String province;
+		private String postalCode;
+		
+		//optional parameters
+		private String streetLine2;
+		private String country;
+		
+		/**
+		 * Default constructor for the required parameters.
+		 * @param streetLine1 Street address, usually street number, name as a String.
+		 * @param city City name as a String.
+		 * @param province Province name as a String.
+		 * @param postalCode Postal Code as a String.
+		 */
+		public Builder(String streetLine1, String city, String province, String postalCode) {
+			this.streetLine1 = streetLine1;
+			this.city = city;
+			this.province = province;
+			this.postalCode = postalCode;
+		}
+		
+		/**
+		 * Builder for the optional parameter streetLine2.
+		 * @param streetLine2 Second line for additional addressing information, typically
+		 * apartment, room, suite, or some other necessary information.
+		 * @return The Builder object with the stored streetLine2 String.
+		 */
+		public Builder streetLine2(String streetLine2) {
+			this.streetLine2 = streetLine2;
+			return this;
+		}
+		
+		/**
+		 * Builder for the optional parameter country.
+		 * @param country String containing the country name.
+		 * @return The Builder object with the stored country String.
+		 */
+		public Builder country(String country) {
+			this.country = country;
+			return this;
+		}
+		
+		/**
+		 * Constructs the Address object based on the specified parameters.
+		 * @return Address object with specified parameters.
+		 */
+		public Address build() {
+			return new Address(this);
+		}
 	}
 	
+	/**
+	 * Constructor using the Build pattern.
+	 * @param builder The Builder specific to the Address class.
+	 */
+	private Address(Builder builder) {
+		this.streetLine1 	= builder.streetLine1;
+		this.streetLine2 	= builder.streetLine2;
+		this.city 			= builder.city;
+		this.province 		= builder.province;
+		this.postalCode 	= builder.postalCode;
+		this.country 		= builder.country;
+	}
 
+	
 	/* ACCESSORS	-----------------------------------------------------	*/
 	/**
 	 * Retrieves String containing the street address.
