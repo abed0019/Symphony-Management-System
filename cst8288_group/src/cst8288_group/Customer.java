@@ -9,7 +9,14 @@ package cst8288_group;
  *
  */
 public class Customer extends Person {
-
+	/**
+	 * Customer Overloaded Constructor
+	 * <br>Sets the Customer's info using the superclass Person
+	 * @param name the Customer's name
+	 * @param homeAddress the Customer's home address
+	 * @param phoneNumber the Customer's preferred phone number
+	 * @param id - the Customer ID
+	 */
 	public Customer(Name name, Address homeAddress, PhoneNumber phoneNumber, String id) {
 		super(name, homeAddress, phoneNumber, id);
 		
