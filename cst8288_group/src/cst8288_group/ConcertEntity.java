@@ -2,7 +2,7 @@ package cst8288_group;
 
 /**
  * Concert Entity Abstract class - factored Name and ID shared by many classes
- * <br> Parent class to any Object that has name(a String, not a proper name) and id
+ * <br> Parent class to any Object that has name(String or Name object) and id
  * 
  * @author    Ash-Lee Hommy 040840815
  * @version   1.0.0 November, 2016
@@ -58,7 +58,13 @@ public abstract class ConcertEntity {
 
 
 	/* ATTRIBUTES	-----------------------------------------------------	*/
+	/**
+	 * ID represented as a String (mix of numbers of letters)
+	 */
 	protected String id = "";
+	/**
+	 * Name represented as a String
+	 */
 	protected String name = "";
 
 
