@@ -1,7 +1,11 @@
-package cst8288_group;
+package CST8288_group;
+import java.util.*;
+import java.util.Date;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 
 /**
- * <b>Concert Class</b>
+ * Concert Class
  * A Concert is a symphony orchestra performance event of zero or more compositions (1:0). 
  * A Concert is a one to many concerts (1:M) in a concert season.
  * A Concert is performed at a Venue (M:1)
@@ -17,92 +21,77 @@ package cst8288_group;
  * @author    My My Ngo
  * @version   1.0.0 October 25, 2016
  */
+
 public class Concert {
-	/* implement these in the other classes instead  */
-	private static final boolean venue_exist = false;
-	private static final boolean conductor_exist = false; //identify that 1 exist
-	private static final boolean soloist_exist = false;  //dentify that 1 or more exist
-	private static final boolean openingDate_exist = false;  //identify concert schedule exist in ConcertSeason class
 
-	private String concertID;
-	private Date concertDate;  /*call Date class - identify a date exist */
-	
-	//private ConcertSeason concertSeason;
-	//private Conductor conductor;  /*call Conductor class */
-	//private Soloist soloist;  /*call Soloist class  */
-	//private Venue venue;  /*call Venue classs - identify that 1 exist */
+	//private static final String concertNumber = "concert123";
+	String concertNumber = "concert123";
+	//Date date;
+	ConcertDate concertDate;
+	SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");  //2016/Jan/13
+	//private ArrayList<Date> concertDateList = new ArrayList<Date>();
 
-
-	public Concert(){
-		concertID = null;
-		concertDate = new Date();	
-		/*conductor = new Conductor();
-		soloist = new Soloist();
-		venue = new Venue();*/		
+	public Concert(String concertNumber){
+		setConcertNumber(concertNumber);	
+		concertDate = new ConcertDate();
+		//concertDateList.add(date = new Date());
 	}
 
-	public Concert(String concertID, Date date){
-		this.concertID = concertID;
-		concertDate = new Date(date); 
-
-	}
 
 	/* ACCESSORS	-----------------------------------------------------	*/
 	/**
 	 * Concert ID getter method
-	 * @return Concert ID as a String
+	 * @return Concert number as a String
 	 */
-	public String getConcertID(){
-		return concertID;
-	}//end getConcertID()
+	public String getConcertNumber(){
+		return concertNumber;
+	}//end getConcertNumber()
 
 	/**
 	 * Concert date getter method
-	 * @return Concert date as a Date object
+	 * @return Concert date(s) as a Date object
 	 */
-	public Date getConcertDate(){
+	public ConcertDate getConcertDate(){
 		return concertDate;
-	}//end getConcertID()
+	}//end getConcertDates()
 
 
 	/* MODIFIERS	-----------------------------------------------------	*/
 	/**
-	 * Concert ID setter method - sets concert id with a String parameter
-	 * @param concertID - Concert identifier (combination of letters and numbers)
+	 * Concert Number setter method - sets concert id with a String parameter
+	 * @param concertNumber - Concert identifier (combination of letters and numbers)
 	 */
-	public void setConcertID(String concertID){
-		this.concertID = concertID;
-	}//end setConcertID()
+	public void setConcertNumber(String concertNumber){
+		this.concertNumber = concertNumber;
+	}//end concertNumber()
 
 
 	/**
 	 * Concert Date setter method - sets concert date with a Date object parameter
 	 * @param concertDate - Date of when concert opens.  
 	 */
-	public void setConcertDate(Date concertDate){
-		 this.concertDate = concertDate;
-	}//end setConcertID()
+	public void setConcertDate(ConcertDate date){
+		concertDate = date;
+	}//end setConcertDate()
 
 
 	/*	NORMAL BEHAVIOR -------------------------------------------------	*/
 	/**
 	 * Overriding the parent toString method to a meaningful String
-	 * @return Concert as a meaningful String
+	 * @return Concert number and concert date as a meaningful String
 	 */
 	@Override
 	public String toString() {
-		return "[ " 
-				+ "concertID=" + getConcertID() 
-				+ " concertDate=" + getConcertDate()
-				/*	+ " venue=" + getComposer()
-				+ " conductor=" + getMovementList()
-				+ " soloist=" + getMovementList()	*/			
+		return "[ Concert " + concertNumber 
+				+ "Date " + dateFormat.format(concertDate)		
 				+ " ]";
 	}
 
-
 	/* HELPER METHODS	--------------------------------------------------	*/
-	/* TODO:	Place helper methods here.												*/
+	/* TODO:	Place helper methods here.		
+	 */
+
+
 
 	/*	ENTRY POINT for STAND-ALONE OPERATION ---------------------------	*/
 	/**
@@ -113,7 +102,6 @@ public class Concert {
 	 *	string array.
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
 	}//end main
 
