@@ -1,4 +1,4 @@
-package CST8288_group;
+package cst8288_group;
 import java.util.*;
 import java.util.Date;
 import java.text.DateFormat;
