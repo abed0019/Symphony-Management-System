@@ -1,16 +1,5 @@
 package cst8288_group;
 
-/**
- * ConcertManagement Class
- * Manages the symphony orchestra from scheduling concert event, booking venues, 
- * hiring employees (conductors, soloist, composers, etc.), selling concert tickets.
- * 
- * @author    My My Ngo
- * @version   1.0.0 October 26, 2016
- */
-
-package cst8288_group;
-
 import java.util.*;
 import java.util.Date;
 import java.text.DateFormat;
@@ -22,7 +11,7 @@ import java.text.SimpleDateFormat;
 * @version   1.0.0 October 25, 2016
 */
 
-public class ConcertManagement2 {
+public class ConcertManagement{
 	
 	Venue venue;
 	ConcertSeason season;
@@ -37,7 +26,7 @@ public class ConcertManagement2 {
 	/**
 	 * Default constructor for ConcertManagement
 	 */
-	public ConcertManagement2(){
+	public ConcertManagement(){
 		//create all the objects
 		venue = new Venue();
 		concertSeason = new ConcertSeason();
@@ -100,11 +89,15 @@ public class ConcertManagement2 {
 	*   Schedule a concert under a concert season.  
 	****/	
 	public void scheduleConcert () ) {
+				
 		Date openingDate = new Date() ;
-		Int length = 10;
-		ArrayList<Concert> concertList = new Concert() ;
-	ArrayList<Venue> venueList = new Venue() ;
-	 	concertSeason.(openingDate, length, concertList, venueList); 
+		int length = 10;
+		public ArrayList<Concert> concertList;
+		public ArrayList<Venue> venueList;
+		
+		//	public ConcertSeason(Date openingDate, int length, ArrayList<Concert> concertList){
+	//
+		concertSeason.(openingDate, length, concertList, venueList); 
 	concertSeason.addVenue();
 	concertSeason.addConcert();
 	}//end scheduleConcert ()
