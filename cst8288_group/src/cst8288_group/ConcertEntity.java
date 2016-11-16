@@ -1,7 +1,9 @@
 package cst8288_group;
 
 /**
- * Abstract class - factored out everything shared by many classes
+ * Concert Entity Abstract class - factored Name and ID shared by many classes
+ * <br> Parent class to any Object that has name(a String, not a proper name) and id
+ * 
  * @author    Ash-Lee Hommy 040840815
  * @version   1.0.0 November, 2016
  */
@@ -11,19 +13,33 @@ public abstract class ConcertEntity {
 	
 
 	/* ACCESSORS	-----------------------------------------------------	*/
+	/**
+	 * Name getter method
+	 * @return the name as a String
+	 */
 	protected String getName() {
 		return name;
 	}
-	 
+	/**
+	 * ID getter method
+	 * @return the ID as a String
+	 */
 	protected String getID() {
 		return id;
 	}
 
 	/* MODIFIERS	-----------------------------------------------------	*/
+	/**
+	 * Name setter method
+	 * @param name the name of the Object
+	 */
 	protected void setName(String name) {
 		this.name = name;
 	}
-	
+	/**
+	 * ID setter method
+	 * @param id the ID of the Object
+	 */
 	protected void setID(String id) {
 		this.id = id;
 		
