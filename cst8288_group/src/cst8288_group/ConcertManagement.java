@@ -16,10 +16,10 @@ public class ConcertManagement{
 	Venue venue;
 	ConcertSeason season;
 	Concert concert;
-	Conductor conductor;  
+	//Conductor conductor;  
 	Soloist soloist;  
 	Composition composition; 
-	FinancialTransation finance;  
+	FinancialTransaction finance;  
 
 
 	/* CONSTRUCTORS	--------------------------------------------------	*/
@@ -31,12 +31,25 @@ public class ConcertManagement{
 		venue = new Venue();
 		concertSeason = new ConcertSeason();
 		concert = new Concert() ;
-		conductor = new Conductor();  
-		soloist = new Soloist();  
-		composition = new Composition() ; 
-		finance = new FinancialTransation();  
+		//conductor = new Conductor();  
+		//soloist = new Soloist();  
+		//composition = new Composition() ; 
+		//finance = new FinancialTransaction();  
 
 	}//end ConcertManagement
+	
+	Date openingDate = new Date() ;
+	int length = 10;
+	
+	public ArrayList<Concert> concertList;
+	public ArrayList<Venue> venueList;
+	
+	
+	//	public ConcertSeason(Date openingDate, int length, ArrayList<Concert> concertList){
+
+	public Concert(String concertNumber)
+	concertSeason.(openingDate, length, concertList, venueList); 
+	
 	
 	/*public Movement(String movName, int movNum) {
 		setMovementNumber(movNum);
@@ -90,14 +103,7 @@ public class ConcertManagement{
 	****/	
 	public void scheduleConcert () ) {
 				
-		Date openingDate = new Date() ;
-		int length = 10;
-		public ArrayList<Concert> concertList;
-		public ArrayList<Venue> venueList;
 		
-		//	public ConcertSeason(Date openingDate, int length, ArrayList<Concert> concertList){
-	//
-		concertSeason.(openingDate, length, concertList, venueList); 
 	concertSeason.addVenue();
 	concertSeason.addConcert();
 	}//end scheduleConcert ()
