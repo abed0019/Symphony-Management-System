@@ -4,7 +4,7 @@ package cst8288_group;
  * Venue Class
  * This class represents the concert Venue in the Symphony Management System.
  * It includes an address, the name of the venue, and the maximum capacity for the venue.
- * Author    Adam Shalla
+ * Author    Adam Shalla & Zobayed Abedin
  * @version   1.0.0	2016-10-26
  */
 

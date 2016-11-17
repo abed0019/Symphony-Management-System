@@ -48,20 +48,7 @@ public class Composition extends ConcertEntity{
 		}
 
 	/* ACCESSORS	-----------------------------------------------------	*/
-	/**
-	 * Composition ID getter method
-	 * @return the Composition ID as a String
-	 
-	public String getCompositionID() {
-		return compositionID;
-	}
-	/**
-	 * Composition name getter method
-	 * @return the Composition name as a String
-	 
-	public String getCompositionName() {
-		return compositionName;
-	}
+
 	/**
 	 * Composer getter method - may change to a Composer object?
 	 * @return the Composer as a String (for now)
@@ -79,20 +66,7 @@ public class Composition extends ConcertEntity{
 
 
 	/* MODIFIERS	-----------------------------------------------------	*/
-	/**
-	 * Composition ID setter method - sets id with a String parameter
-	 * @param id the Composition identifier (combination of letters and numbers)
-	 
-	public void setCompositionID(String id) {
-		compositionID = id;
-	}
-	/**
-	 * Composition name setter method - sets name with String parameter
-	 * @param name the Composition name
-	 
-	public void setCompositionName(String name) {
-		compositionName = name;
-	}
+
 	/**
 	 * Composer setter method - sets composer with a String param (for now)
 	 * @param composer the Composer of the Composition
@@ -158,22 +132,12 @@ public class Composition extends ConcertEntity{
 
 
 	/* ATTRIBUTES	-----------------------------------------------------	*/
+
 	/**
-	 * The ID of the Composition, as set by the Composer
-	 * <br>Represented as a private String
-	 */
-	//private String compositionID;
-	/**
-	 * The name of the Composition, as set by the Composer
-	 * <br>Represented as a private String
-	 */
-	//private String compositionName;
-	/**
-	 * The composer of the Composition (may be a Class or type of Person?)
-	 * <br>TODO figure out what the composer is
+	 * The composer of the Composition 
 	 * <br>Represented as a private String (for now)
 	 */
-	private String composer; //Will Composer be a Class? or a type of Person? a String for now
+	private String composer; 
 	/**
 	 * The list of Movements within the Composition (0 to many)
 	 * 

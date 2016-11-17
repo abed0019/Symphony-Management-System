@@ -26,17 +26,20 @@ public class Concert {
 
 	//private static final String concertNumber = "concert123";
 	String concertNumber = "concert123";
+	Venue concertVenue;
+	java.sql.Timestamp timeStamp;
 	//Date date;
-	ConcertDate concertDate;
 	SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");  //2016/Jan/13
 	//private ArrayList<Date> concertDateList = new ArrayList<Date>();
 
 	public Concert(String concertNumber){
 		setConcertNumber(concertNumber);	
-		concertDate = new ConcertDate();
+		timeStamp = new java.sql.Timestamp(new java.util.Date().getTime());
+		concertVenue = new Venue();
 		//concertDateList.add(date = new Date());
-	}
 
+	}
+	
 
 	/* ACCESSORS	-----------------------------------------------------	*/
 	/**
@@ -46,7 +49,9 @@ public class Concert {
 	public String getConcertNumber(){
 		return concertNumber;
 	}//end getConcertNumber()
-
+	public Venue getVenue(){
+		return concertVenue;
+	}
 	/**
 	 * Concert date getter method
 	 * @return Concert date(s) as a Date object
