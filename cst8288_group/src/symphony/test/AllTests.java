@@ -1,7 +1,7 @@
 package symphony.test;
 
 import junit.framework.*;
-import test.*;
+import symphony.test.*;
 
 /**
  * JUnit test class which executes all JUnit tests for the symphony project
