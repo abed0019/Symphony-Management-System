@@ -34,7 +34,7 @@ public class TicketIssuance {//Could be combined with ticket... Maybe
 		else{ 
 			soldOut=false;
 			sellTicket=true;
-			//concert.getTotalTicketSale();//From venue total tickets sales
+			concert.getVenue().getTotalTicketSale();//From venue total tickets sales
 		}
 	}
 
