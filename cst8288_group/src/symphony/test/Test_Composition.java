@@ -1,7 +1,7 @@
-package test;
+package symphony.test;
 
-import cst8288_group.Composition;
 import junit.framework.*;
+import symphony.domain.Composition;
 
 /**
  * JUnit tests for the Composition class from the "symphony" project

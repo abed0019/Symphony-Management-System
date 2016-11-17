@@ -1,5 +1,5 @@
 
-package cst8288_group;								
+package symphony.domain;								
 
 /**
  * <b>Movement Class</b>

@@ -1,4 +1,4 @@
-package cst8288_group;
+package symphony.domain;
 
 import java.util.*;
 import java.util.Date;

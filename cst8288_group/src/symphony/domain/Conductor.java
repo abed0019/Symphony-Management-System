@@ -1,3 +1,4 @@
+package symphony.domain;
 //
 //	This class is unnecessary unless Conductor-specific attributes are required.
 //

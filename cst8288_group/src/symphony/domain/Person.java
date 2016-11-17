@@ -1,4 +1,4 @@
-package cst8288_group;
+package symphony.domain;
 
 /**
  * Person is a class that contains the most basic information about an individual.

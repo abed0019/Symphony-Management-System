@@ -1,4 +1,4 @@
-package test;
+package symphony.test;
 
 import junit.framework.*;
 import test.*;

@@ -1,4 +1,4 @@
-package cst8288_group;
+package symphony.domain;
 /**
  * Customer Class
  * <br> Handles the data of a Customer who buys a ticket

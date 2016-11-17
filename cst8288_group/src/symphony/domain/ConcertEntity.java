@@ -1,4 +1,4 @@
-package cst8288_group;
+package symphony.domain;
 
 /**
  * Concert Entity Abstract class - factored Name and ID shared by many classes

@@ -1,4 +1,4 @@
-package cst8288_group;
+package symphony.domain;
 import java.lang.reflect.Array;
 import java.sql.Date;
 import java.text.ParseException;

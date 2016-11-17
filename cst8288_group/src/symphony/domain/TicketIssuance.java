@@ -1,4 +1,4 @@
-package cst8288_group;
+package symphony.domain;
 /**
  * This class determines whether or not a ticket is sold based on capacity
  * @author Carnage

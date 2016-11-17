@@ -1,4 +1,4 @@
-package cst8288_group;
+package symphony.domain;
 
 /**
  * PhoneNumber is a class that contains the full phone number of a person or place.
