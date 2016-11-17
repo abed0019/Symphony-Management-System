@@ -117,14 +117,16 @@ public class ConcertSeason	{
 	private String seasonName;
 
 	//uncomment lines below to test
-	/*public static void main(String[] args) {
+	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println("Testing Concert season");
+		/*System.out.println("Testing Concert season");
 		ConcertSeason season = new ConcertSeason("test season");
 		ConcertSeason fall = new ConcertSeason("fall");
 		ConcertSeason winter = new ConcertSeason("winter");
 		System.out.println(season);
-		System.out.println(fall);
-	}*/
+		System.out.println(fall);*/
+		Ticket ticket = new Ticket();
+		ticket.displayTicket();
+	}
 }	/*End of CLASS:	Skeleton.java*/
 
