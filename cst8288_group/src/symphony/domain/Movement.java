@@ -20,23 +20,18 @@ public class Movement extends ConcertEntity{
 	}
 	/**
 	 * Overloaded constructor to set Movement's name, number and ID
-	 * @param movName
-	 * @param movNum
+	 * @param movName the name of the Movement
+	 * @param movNum the number of the Movement
+	 * @param movID the Movement unique identifier
 	 */
-	public Movement(String movName, int movNum) {
+	public Movement(String movName, int movNum, String movID) {
 		setMovementNumber(movNum);
 		setName(movName);
-		setID(movName + movNum);
+		setID(movID);
 	}
 	
 	/* ACCESSORS	-----------------------------------------------------	*/
-	/**
-	 * Movement ID getter method
-	 * @return the Movement ID as a String (Name and number)
-	 
-	public String getMovementID	() {
-		return movementID;
-	}
+
 	/**
 	 * Movement number getter method
 	 * @return the Movement number as an int
@@ -44,31 +39,10 @@ public class Movement extends ConcertEntity{
 	public int getMovementNumber() {
 		return movementNumber;
 	}
-	/**
-	 * Movement name getter method
-	 * @return the Movement name as a String
-	 
-	public String getMovementName() {
-		return movementName;
-	}
 
 
 	/* MODIFIERS	-----------------------------------------------------	*/
-	/**
-	 * MovementID setter method - private because this should not be used to set the ID directly
-	 * <br>A concatenation of the Movement name and number, set with a parameter
-	 * @param id the Movement identifier: the name and number
-	 
-	private void setMovementID(String id) {
-		movementID = id;
-	}
-	/**
-	 * Movement name setter method - sets Movement name with a String parameter
-	 * @param name String representation of the Movement name
-	 
-	public void setMovementName(String name) {
-		movementName = name;
-	}
+
 	/**
 	 * Movement number setter method - sets the Movement number with an int parameter
 	 * @param num int representation of the Movement number
@@ -76,8 +50,6 @@ public class Movement extends ConcertEntity{
 	public void setMovementNumber(int num) {
 		movementNumber = num;
 	}
-	
-
 
 	/*	NORMAL BEHAVIOR -------------------------------------------------	*/
 	/**
@@ -97,22 +69,10 @@ public class Movement extends ConcertEntity{
 	/* ATTRIBUTES	-----------------------------------------------------	*/
 	
 	/**
-	 * Identification of the movement, represented by the String concatenation of the Movement name and number
-	 * <br>Represented as a private String
-	 */
-	//private String movementID;
-	/**
 	 * The number of the Movement within the Composition, chosen by the Composer
 	 * <br>Represented as a private int
 	 */
 	private int movementNumber;
-	/**
-	 * The name of the Movement within the Composition, chosen by the Composer
-	 * <br>Represented as a private String
-	 */
-	//private String movementName;
-
-
 
 
 }	/*	End of CLASS:	Movement.java			*/

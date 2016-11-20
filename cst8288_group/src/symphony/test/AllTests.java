@@ -19,7 +19,7 @@ public class AllTests extends TestCase {
 		TestSuite suite = new TestSuite();
 		//suite.addTest(Test_Address.suite());
 		//suite.addTest(Test_Committee.suite());
-		//suite.addTest(Test_Composition.suite());
+		suite.addTest(Test_Composition.suite());
 		//suite.addTest(Test_Concert.suite());
 		//suite.addTest(Test_ConcertDate.suite());
 		//suite.addTest(Test_ConcertEntity.suite());

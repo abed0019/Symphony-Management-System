@@ -112,7 +112,7 @@ public class Composition extends ConcertEntity{
 	 *	string array.
 	 */
 	public static void main (String args[]) {
-		Movement mov1 = new Movement("TheFirst", 1);
+		/*Movement mov1 = new Movement("TheFirst", 1);
 		Movement mov2 = new Movement("TheFirst", 2);
 		Movement mov3 = new Movement("Movement", 1);
 		
@@ -127,7 +127,7 @@ public class Composition extends ConcertEntity{
 		
 		System.out.println(comp1.toString());
 		System.out.println(comp2.toString());
-		System.out.println(comp3.toString());
+		System.out.println(comp3.toString());*/
 	}
 
 
