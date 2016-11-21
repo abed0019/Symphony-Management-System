@@ -95,9 +95,9 @@ public class Venue	extends ConcertEntity{ //shoudld extend concertEntity
 	 */
 	public String toString()
 	{
-		return  "Venue: " + super.getName() + 
-				" Address: " + this.getLocation() + 
-				" Max capacity: " + this.getMaxCapacity();
+		return  "[Venue: " + super.getName() + 
+				" at address: " + this.getLocation() + 
+				" with max capacity: " + this.getMaxCapacity() + "]";
 	}
 
 
