@@ -6,38 +6,20 @@ import java.text.SimpleDateFormat;
 
 /**
  * Concert Class
- * A Concert is a symphony orchestra performance event of zero or more compositions (1:0). 
- * A Concert is a one to many concerts (1:M) in a concert season.
- * A Concert is performed at a Venue (M:1)
- * A concert is performed on one or more specific dates (1:M)
- * Each concert has a ID number given by the Committee
- * A concert must have 1 conductor. A conductor may conduct any number of concerts, 
- * may not conduct any concerts.
- * A concert must have 1 or more soloist(s). A soloist may perform 0 to many compositions.
- * (Question: who will perform the composition if Soloist doesnt as there must be at least 1 at a concert??)
- *  
- * A Composition may have 0 to many movements.
- * 
+ * This class identifies the type of concert and the concert date.
  * @author    My My Ngo
  * @version   1.0.0 October 25, 2016
  */
 
 public class Concert {
 
-	//private static final String concertNumber = "concert123";
-	String concertNumber = "concert123";
-	Venue concertVenue;
-	java.sql.Timestamp timeStamp;
-	//Date date;
-	SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");  //2016/Jan/13
-	//private ArrayList<Date> concertDateList = new ArrayList<Date>();
-
+	private static String concertNumber = "Concert99";
+	java.util.Date aDate = new java.util.Date();	
+	java.sql.Timestamp concertDate;
+	
 	public Concert(String concertNumber){
 		setConcertNumber(concertNumber);	
-		timeStamp = new java.sql.Timestamp(new java.util.Date().getTime());
-		concertVenue = new Venue();
-		//concertDateList.add(date = new Date());
-
+		concertDate = new java.sql.Timestamp(aDate.getTime());
 	}
 	
 
@@ -47,16 +29,14 @@ public class Concert {
 	 * @return Concert number as a String
 	 */
 	public String getConcertNumber(){
-		return concertNumber;
+		return getConcertNumber();
 	}//end getConcertNumber()
-	public Venue getVenue(){
-		return concertVenue;
-	}
+	
 	/**
 	 * Concert date getter method
 	 * @return Concert date(s) as a Date object
 	 */
-	public ConcertDate getConcertDate(){
+	public java.sql.Timestamp getConcertDate(){
 		return concertDate;
 	}//end getConcertDates()
 
@@ -66,8 +46,8 @@ public class Concert {
 	 * Concert Number setter method - sets concert id with a String parameter
 	 * @param concertNumber - Concert identifier (combination of letters and numbers)
 	 */
-	public void setConcertNumber(String concertNumber){
-		this.concertNumber = concertNumber;
+	public void setConcertNumber(String concertID){
+		concertNumber = concertID;
 	}//end concertNumber()
 
 
@@ -75,7 +55,7 @@ public class Concert {
 	 * Concert Date setter method - sets concert date with a Date object parameter
 	 * @param concertDate - Date of when concert opens.  
 	 */
-	public void setConcertDate(ConcertDate date){
+	public void setConcertDate(java.sql.Timestamp date){
 		concertDate = date;
 	}//end setConcertDate()
 
@@ -87,9 +67,8 @@ public class Concert {
 	 */
 	@Override
 	public String toString() {
-		return "[ Concert " + concertNumber 
-				+ "Date " + dateFormat.format(concertDate)		
-				+ " ]";
+		return "\n[Concert Number: " + concertNumber 
+				+ ", Date: " + concertDate + "]";
 	}
 
 	/* HELPER METHODS	--------------------------------------------------	*/
@@ -107,7 +86,9 @@ public class Concert {
 	 *	string array.
 	 */
 	public static void main(String[] args) {
-
+		//Test output
+		Concert concert = new Concert(concertNumber);
+		System.out.println(concert);
 	}//end main
 
 }//end Concert Class

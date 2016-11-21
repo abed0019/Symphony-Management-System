@@ -188,10 +188,11 @@ public class Address	{
 	 */
 	public String toString() {
 		String address = getStreetLine1();
-		if (!getStreetLine2().isEmpty()) address.concat("\n" + getStreetLine2());
+		
+		/*if (!getStreetLine2().isEmpty()) address.concat("\n" + getStreetLine2());
 		address.concat("\n" + getCity() + " " + getProvince() + "  " + getPostalCode());
 		if (!getCountry().equals("Canada")) address.concat("\n" + getCountry());
-
+		 */
 		return address;
 	}
 
