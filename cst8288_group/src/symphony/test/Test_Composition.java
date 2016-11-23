@@ -124,7 +124,6 @@ public class Test_Composition extends TestCase {
 		composition = new Composition("CompMov3id", "MovementComposition", "Mr.Composer", testMovementsList);
 
 		String str = composition.toString();
-		System.out.println(str);
 		assertEquals("\t\tTest_Composition.testBehaviors: composition toString is not equal", str, "[ compositionID=CompMov3id compositionName=MovementComposition composer=Mr.Composer "
 				+ "movementList=[[ movementID=MOV1 movementName=Cello Movement movementNumber=1 ], [ movementID=MOV2 movementName=Brass Movement movementNumber=2 ]] ]");
 

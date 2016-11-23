@@ -1,7 +1,6 @@
 package symphony.test;
 
 import junit.framework.*;
-import symphony.test.*;
 
 /**
  * JUnit test class which executes all JUnit tests for the symphony project
@@ -18,21 +17,23 @@ public class AllTests extends TestCase {
 	 */
 	public static Test suite() {
 		TestSuite suite = new TestSuite();
-		suite.addTest(Test_Address.suite());
-		//suite.addTest(Test_Committee.suite());
-		suite.addTest(Test_Composition.suite()); //NEW TEST ADDED TO THE TEST SUITE
+		suite.addTest(Test_Address.suite());//NEW TEST ADDED TO THE TEST SUITE
+		suite.addTest(Test_Committee.suite());//NEW TEST ADDED TO THE TEST SUITE
+		suite.addTest(Test_Composition.suite()); 
 		//suite.addTest(Test_Concert.suite());
 		//suite.addTest(Test_ConcertDate.suite());
-		suite.addTest(Test_ConcertEntity.suite()); //NEW TEST ADDED TO THE TEST SUITE
+		suite.addTest(Test_ConcertEntity.suite()); 
 		//suite.addTest(Test_ConcertManagement.suite());
 		//suite.addTest(Test_ConcertSeason.suite());
 		//suite.addTest(Test_Conductor.suite());
+		suite.addTest(Test_Customer.suite());//NEW TEST ADDED TO THE TEST SUITE
 		//suite.addTest(Test_FinancialTransaction.suite());
 		suite.addTest(Test_Movement.suite());
-		suite.addTest(Test_Name.suite());
-		suite.addTest(Test_Person.suite());
-		suite.addTest(Test_PhoneNumber.suite());
+		suite.addTest(Test_Name.suite());//NEW TEST ADDED TO THE TEST SUITE
+		suite.addTest(Test_Person.suite());//NEW TEST ADDED TO THE TEST SUITE
+		suite.addTest(Test_PhoneNumber.suite());//NEW TEST ADDED TO THE TEST SUITE
 		//suite.addTest(Test_Soloist.suite());
+		//suite.addTest(Test_Venue.suite());
 		
 		return suite;
 	}

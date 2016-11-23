@@ -1,10 +1,8 @@
 package symphony.test;
 
-import java.util.ArrayList;
 
 import junit.framework.*;
 import symphony.domain.Composition;
-import symphony.domain.Movement;
 
 /**
  * JUnit tests for the abstract Concert Entity class from the "symphony" project
