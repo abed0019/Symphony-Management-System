@@ -114,12 +114,14 @@ public class Ticket {
 	 */
 	private int ticketID;
 	
-} /*	End of CLASS:	Ticket.java			*/	
-	
-	 static class UniqueID{
+	static class UniqueID{
 		private static int uid = 0;
 		public static int getInstance(){
 			uid++;
 			return uid;
 		}
-	}
+	
+} /*	End of CLASS:	Ticket.java			*/	
+	
+
+}
