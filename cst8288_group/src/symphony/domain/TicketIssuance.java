@@ -33,7 +33,7 @@ public class TicketIssuance {//Could be combined with ticket... Maybe
 	}
 
 	public void sellTicket(){
-		if (concert.getVenue().getMaxCapacity()== concert.getVenue().getTotalTicketSale()){
+		if (scheduledConcert.getVenue().getMaxCapacity()== scheduledConcert.getVenue().getTotalTicketSale()){
 			soldOut=true; 
 			sellTicket=false;
 
@@ -41,9 +41,9 @@ public class TicketIssuance {//Could be combined with ticket... Maybe
 		else{ 
 			soldOut=false;
 			sellTicket=true;
-			concert.getVenue().getTotalTicketSale();//From venue total tickets sales
+			scheduledConcert.getVenue().getTotalTicketSale();//From venue total tickets sales
 		}
 	}
 
-	Concert concert = new Concert("");
+	ScheduledConcert scheduledConcert = new ScheduledConcert();
 }
