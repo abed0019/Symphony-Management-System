@@ -91,4 +91,4 @@ public class Concert {
 		System.out.println(concert);
 	}//end main
 
-}//end Concert Class
+}	/*	End of CLASS:	Concert.java			*/
