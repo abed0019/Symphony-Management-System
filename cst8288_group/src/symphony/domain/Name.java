@@ -147,43 +147,15 @@ public class Name {
 	 * HONORIFIC. GIVEN MIDDLE SURNAME
 	 */
 	public String toString() {
-		return "honorific=" + getHonorific()
-				+ ",given=" + getGiven()
-				+ ",middle=" + getMiddle()
-				+ ",surname=" + getSurname();
-		
-//		Uncertain why the below string formatter isn't working.
-//		
-//		"string" is getting the Strings passed from "array", but it's not getting
-//		concatenated into "name" even though the (!string.isEmpty()) call is passing
-//		when it's expected to.
-//		
-//		Thoughts?
-//		
-//		String[] array = new String[] {getHonorific(), getGiven(), getMiddle(), getSurname()};
-//		String name = "";
-//		for (String string : array) {
-//			if (!string.isEmpty()) name.concat(string + " ");
-//		}
-//		return name.trim();
+		String name = "";
+		if (!getHonorific().isEmpty()) name = name.concat(getHonorific() + " ");
+		name = name.concat(getGiven());
+		if (!getMiddle().isEmpty()) name = name.concat(" " + getMiddle() + " ");
+		name = name.concat(getSurname());
+		return name;
 	}
 	
 	
-	/*  ENTRY/TESTING ---------------------------------------------------   */
-	
-	public static void main(String[] args) {
-		System.out.println("Testing Name builder...");
-		
-		Name name1 = new Name.Builder("Chase", "Thorne").build();
-		Name name2 = new Name.Builder("Chase", "Thorne").
-				middle("Nelson").honorific("Mr.").build();
-		
-		System.out.println(name1.toString());
-		System.out.println(name2.toString());
-		System.out.println("Done testing Name builder.");
-	}
-
-
 	/* ATTRIBUTES	-----------------------------------------------------	*/
 
 	/**

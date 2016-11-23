@@ -18,8 +18,8 @@ public class Address	{
 		private String postalCode;
 		
 		//optional parameters
-		private String streetLine2;
-		private String country;
+		private String streetLine2 = "";
+		private String country = "";
 		
 		/**
 		 * Default constructor for the required parameters.
@@ -188,22 +188,15 @@ public class Address	{
 	 */
 	public String toString() {
 		String address = getStreetLine1();
+		if (!getStreetLine1().equals("")) {address = address.concat("\n" + getStreetLine2());}
+		address = address.concat("\n" + getCity() + " " + getProvince() + " " + getPostalCode());
+		if (!getCountry().equals("")) {address = address.concat("\n" + getCountry());}
 		
-		/*if (!getStreetLine2().isEmpty()) address.concat("\n" + getStreetLine2());
-		address.concat("\n" + getCity() + " " + getProvince() + "  " + getPostalCode());
-		if (!getCountry().equals("Canada")) address.concat("\n" + getCountry());
-		 */
+		
+		
 		return address;
 	}
 
-
-	/* HELPER METHODS	--------------------------------------------------	*/
-
-
-
-	/*	ENTRY POINT for STAND-ALONE OPERATION ---------------------------	*/
-
-	
 
 	/* ATTRIBUTES	-----------------------------------------------------	*/
 	/**

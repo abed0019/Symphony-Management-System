@@ -23,6 +23,18 @@ public class PhoneNumber {
 		setSubscriber2(subscriber2);
 	}
 	
+	/**
+	 * Constructor without country code.
+	 * @param area String containing the area code of the phone number.
+	 * @param subscriber1 String containing the first part of the subscriber number of a person's phone number.
+	 * @param subscriber2 String containing the second part of the subscriber number of a person's phone number.
+	 */
+	public PhoneNumber(String area, String subscriber1, String subscriber2) {
+		setArea(area);
+		setSubscriber1(subscriber1);
+		setSubscriber2(subscriber2);
+	}
+	
 	
 	/* ACCESSORS	-----------------------------------------------------	*/
 	
@@ -105,8 +117,8 @@ public class PhoneNumber {
 	 */
 	public String toString() {
 		String number = "";
-		if (!country.isEmpty()) number = "+" + getCountry() + " ";
-		number.concat(getArea() + " " + getSubscriber1() + " " + getSubscriber2());
+		if (!country.isEmpty()) number = getCountry() + " ";
+		number = number.concat(getArea() + " " + getSubscriber1() + " " + getSubscriber2());
 		return number;
 	}
 	
