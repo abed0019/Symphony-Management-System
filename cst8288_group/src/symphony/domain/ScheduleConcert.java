@@ -76,7 +76,7 @@ public class ScheduleConcert {
 	/**
 	 * addConcertToSchedule() - Add new concerts to a concert season
 	 * @param - none
-	 *******************************************************************/
+	 */
 	public void addConcertToSchedule(){
 		
 	}

@@ -52,7 +52,7 @@ public class ScheduledConcert extends Concert {
 	 */
 	public TicketSales getTicketSales()
 	{
-		return ticketSales;
+		return sales;
 	}
 	
 	/**
@@ -78,15 +78,15 @@ public class ScheduledConcert extends Concert {
 	 */
 	public void setTicketSales(TicketSales sales)
 	{
-		this.locationName = locationName;
+		this.sales = sales;
 	}
 	
 	/**
 	 * @param maxCapacity The maximum capacity of the venue
 	 */
-	public void setMaxCapacity(int maxCapacity)
+	public void setConcertDate(ConcertDate date)
 	{
-		this.maxCapacity = maxCapacity;
+		concertDate = date;
 	}
 	
 	/*	NORMAL BEHAVIOR -------------------------------------------------	*/
@@ -103,7 +103,7 @@ public class ScheduledConcert extends Concert {
 	/**
 	 * The ticket sales for the concert
 	 */
-	private TicketSales ticketSales;
+	private TicketSales sales;
 	
 	/**
 	 * The date on which the concert will be held

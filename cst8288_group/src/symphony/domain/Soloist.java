@@ -1,8 +1,5 @@
 package symphony.domain;
-
-
-
-											
+										
 /**
  * Soloist Class
  * A person who performs a given composition ( 0 to many )
@@ -15,36 +12,21 @@ package symphony.domain;
  * @version   1.0.0 October 25, 2016
  */
 
-
-
 public class Soloist extends Person {
-
-	
-	
-	
 	
 	/* CONSTRUCTORS	--------------------------------------------------	*/
-	
-	
-
+	/**
+	 * Parameterized constructor
+	 * 
+	 * @param name			- The soloist's name
+	 * @param homeAddress	- The soloist's home address
+	 * @param phoneNumber	- A phone number where the soloist can be reached
+	 * @param id			- The soloist's soloist ID
+	 */
 	public Soloist (Name name, Address homeAddress, PhoneNumber phoneNumber, String id) {
 		
 		super(name, homeAddress, phoneNumber, id);
-		
-		//setSoloistID(soloistID);
-		
 	}
-	
-	
-	
-
-	/**
-	 *	Paramertized constructor.
-	 *	@param	value	Some attribute value.
-	 */
-
-
-
 
 	/* ACCESSORS	-----------------------------------------------------	*/
 	
