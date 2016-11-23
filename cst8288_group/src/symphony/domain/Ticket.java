@@ -77,13 +77,6 @@ public class Ticket {
 		this.ticketID = ticketID;
 	}
 
-	/**
-	 * 
-	 * @param ticketID - The unique ID of the ticket
-	 */
-	public void setTicketID(Integer ticketID){
-		this.ticketID=ticketID; 
-	}
 	
 	
 	/* NORMAL BEHAVIOUR	----------------------------------------------	*/
