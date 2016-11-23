@@ -17,14 +17,14 @@ public abstract class ConcertEntity {
 	 * Name getter method
 	 * @return the name as a String
 	 */
-	protected Object getName() {
+	public Object getName() {
 		return name;
 	}
 	/**
 	 * ID getter method
 	 * @return the ID as a String
 	 */
-	protected String getID() {
+	public String getID() {
 		return id;
 	}
 

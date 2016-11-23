@@ -6,6 +6,7 @@ import symphony.test.*;
 /**
  * JUnit test class which executes all JUnit tests for the symphony project
  * 
+ * 
  * @author Ash-Lee Hommy 040840815
  * @version 1.0.0
  */
@@ -19,15 +20,15 @@ public class AllTests extends TestCase {
 		TestSuite suite = new TestSuite();
 		//suite.addTest(Test_Address.suite());
 		//suite.addTest(Test_Committee.suite());
-		suite.addTest(Test_Composition.suite());
+		suite.addTest(Test_Composition.suite()); //NEW TEST ADDED TO THE TEST SUITE
 		//suite.addTest(Test_Concert.suite());
 		//suite.addTest(Test_ConcertDate.suite());
-		//suite.addTest(Test_ConcertEntity.suite());
+		suite.addTest(Test_ConcertEntity.suite()); //NEW TEST ADDED TO THE TEST SUITE
 		//suite.addTest(Test_ConcertManagement.suite());
 		//suite.addTest(Test_ConcertSeason.suite());
 		//suite.addTest(Test_Conductor.suite());
 		//suite.addTest(Test_FinancialTransaction.suite());
-		//suite.addTest(Test_Movement.suite());
+		suite.addTest(Test_Movement.suite());
 		//suite.addTest(Test_Name.suite());
 		//suite.addTest(Test_Person.suite());
 		//suite.addTest(Test_PhoneNumber.suite());

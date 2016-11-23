@@ -42,13 +42,13 @@ public class Test_Movement extends TestCase {
 	public void testAccessors() {
 		System.out.println("\tExecuting Test_Movement.testAccessors");
 		movement = new Movement();
-		assertNotNull("\t\tTest_Movement.testConstructors: Movement is null", movement);
+		assertNotNull("\t\tTest_Movement.testAccessors: Movement is null", movement);
 		
 		movement.setMovementNumber(12);
-		assertTrue("\t\tTest_ShannonsModel.testMutators: Expecting Movement Number equal to 12", movement.getMovementNumber() == 12);
+		assertTrue("\t\tTest_Movement.testAccessors: Expecting Movement Number equal to 12", movement.getMovementNumber() == 12);
 		
 		movement.setMovementNumber(10);
-		assertFalse("\t\tTest_ShannonsModel.testMutators: Expecting movement number equal to 12", movement.getMovementNumber() == 12);
+		assertFalse("\t\tTest_Movement.testAccessors: Expecting movement number equal to 12", movement.getMovementNumber() == 12);
 
 	}
 	
@@ -59,13 +59,13 @@ public class Test_Movement extends TestCase {
 	public void testMutators() {
 		System.out.println("\tExecuting Test_Movement.testMutators");
 		movement = new Movement();
-		assertNotNull("\t\tTest_Movement.testConstructors: Movement is null", movement);
+		assertNotNull("\t\tTest_Movement.testMutators: Movement is null", movement);
 		
 		movement.setMovementNumber(0);
-		assertTrue("\t\tTest_ShannonsModel.testMutators: Expecting Movement Number equal to 0", movement.getMovementNumber() == 0);
+		assertTrue("\t\tTest_Movement.testMutators: Expecting Movement Number equal to 0", movement.getMovementNumber() == 0);
 		
 		movement.setMovementNumber(100000);
-		assertFalse("\t\tTest_ShannonsModel.testMutators: Expecting movement number equal to 12", movement.getMovementNumber() == 12);
+		assertFalse("\t\tTest_Movement.testMutators: Expecting movement number equal to 12", movement.getMovementNumber() == 12);
 
 	}
 	
@@ -77,7 +77,7 @@ public class Test_Movement extends TestCase {
 		System.out.println("\tExecuting Test_Movement.testBehaviors");
 		
 		movement = new Movement("Cello Movement", 1, "MOV1");
-		assertNotNull("\t\tTest_Movement.testConstructors: Movement is null", movement);
+		assertNotNull("\t\tTest_Movement.testBehaviors: Movement is null", movement);
 		
 		String str = movement.toString();
 		assertEquals("\t\tTest_Movement.testBehaviors: movement toString is not equal", str, "[ movementID=MOV1 movementName=Cello Movement movementNumber=1 ]");
