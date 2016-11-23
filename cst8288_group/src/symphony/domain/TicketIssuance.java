@@ -13,6 +13,13 @@ public class TicketIssuance {//Could be combined with ticket... Maybe
 		this.sellTicket=sellTicket; 
 
 	}
+	public void setMethodofPayment(String methodofpayment){
+		this.methodofpayment=methodofpayment;
+	}
+	
+	public String getMethodofPayment(){
+		return methodofpayment; 
+	} 
 
 	public boolean getTicketStatus(){
 		return sellTicket;

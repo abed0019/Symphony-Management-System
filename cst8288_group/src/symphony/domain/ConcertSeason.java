@@ -18,28 +18,18 @@ public class ConcertSeason	{
 	/* TODO:	Place constructors here.												*/
 	public ConcertSeason(String seasonName){
 		this.seasonName = seasonName;
-		/*SimpleDateFormat sdf1 = new SimpleDateFormat("dd-MM-yyyy");
-		try {
-			openingDate = new Date(sdf1.parse("10-01-2000").getTime());
-		} catch (ParseException e) {
-			e.printStackTrace();
-		}*/
+			
+			concertSeasonDate = new java.sql.Timestamp(aDate.getTime());
 		concertList = new ArrayList<Concert>();
 		this.length = 0;
 	}
 	public ConcertSeason(String seasonName, int length){
 		this.seasonName = seasonName;
-		/*SimpleDateFormat sdf1 = new SimpleDateFormat("dd-MM-yyyy");
-		try {
-			openingDate = new Date(sdf1.parse("10-01-2000").getTime());
-		} catch (ParseException e) {
-			e.printStackTrace();
-		}*/
 		concertList = new ArrayList<Concert>();
 		this.length = 0;
 	}
-	public ConcertSeason(String seasonName, java.sql.Timestamp openingDate, int length, ArrayList<Concert> concertList){
-		this.openingDate=openingDate; 
+	public ConcertSeason(String seasonName, java.sql.Timestamp concertSeasonDate, int length, ArrayList<Concert> concertList){
+		this.concertSeasonDate=concertSeasonDate; 
 		this.length=length; 
 		this.concertList=concertList; 
 		this.seasonName = seasonName;
@@ -48,7 +38,7 @@ public class ConcertSeason	{
 	/* ACCESSORS	-----------------------------------------------------	*/
 	/* TODO:	Place accessors here.													*/
 	public java.sql.Timestamp getOpeningDate(){
-		return openingDate;
+		return concertSeasonDate;
 	}
 	public ArrayList<Concert>getConcertList(){
 		return concertList;
@@ -62,8 +52,8 @@ public class ConcertSeason	{
 	/* MODIFIERS	-----------------------------------------------------	*/
 	/* TODO:	Place modifier/mutator methods here.	
 	 */
-	public void setOpeningDate(java.sql.Timestamp openingDate){
-		this.openingDate=openingDate; 
+	public void setOpeningDate(java.sql.Timestamp concertSeasonDate){
+		this.concertSeasonDate=concertSeasonDate; 
 	}
 	public void setLength(int length){
 		this.length=length; 
@@ -105,16 +95,18 @@ public class ConcertSeason	{
 	@Override
 	public String toString() {
 		return "\n[ConcertSeason:  " + seasonName 
-				+ ", Opening Date: " + this.openingDate	
+				+ ", Opening Date: " + this.concertSeasonDate
 				+ ", length (In days) : " + this.length
 				+ " ]";
 	}
 
 	/* ATTRIBUTES	-----------------------------------------------------	*/
-	public java.sql.Timestamp openingDate;
+	
 	private ArrayList<Concert>concertList;
 	private int length;
 	private String seasonName;
+	java.util.Date aDate = new java.util.Date();	
+	java.sql.Timestamp concertSeasonDate;
 
 	//uncomment lines below to test
 	public static void main(String[] args) {
