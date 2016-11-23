@@ -18,7 +18,7 @@ public class AllTests extends TestCase {
 	 */
 	public static Test suite() {
 		TestSuite suite = new TestSuite();
-		//suite.addTest(Test_Address.suite());
+		suite.addTest(Test_Address.suite());
 		//suite.addTest(Test_Committee.suite());
 		suite.addTest(Test_Composition.suite()); //NEW TEST ADDED TO THE TEST SUITE
 		//suite.addTest(Test_Concert.suite());
@@ -29,9 +29,9 @@ public class AllTests extends TestCase {
 		//suite.addTest(Test_Conductor.suite());
 		//suite.addTest(Test_FinancialTransaction.suite());
 		suite.addTest(Test_Movement.suite());
-		//suite.addTest(Test_Name.suite());
-		//suite.addTest(Test_Person.suite());
-		//suite.addTest(Test_PhoneNumber.suite());
+		suite.addTest(Test_Name.suite());
+		suite.addTest(Test_Person.suite());
+		suite.addTest(Test_PhoneNumber.suite());
 		//suite.addTest(Test_Soloist.suite());
 		
 		return suite;
