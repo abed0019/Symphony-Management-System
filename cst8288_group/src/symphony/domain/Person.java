@@ -76,7 +76,17 @@ public class Person extends ConcertEntity	{
 	}
 
 	/*	NORMAL BEHAVIOR -------------------------------------------------	*/
-
+	/**
+	 * toString method that returns a person's information
+	 */
+	public String toString() {
+		String person = "";
+		person = super.getID();
+		person = person.concat("\n" + name.toString());
+		person = person.concat("\n" + phoneNumber.toString());
+		person = person.concat("\n" + address.toString());
+		return person;
+	}
 
 
 	/* HELPER METHODS	--------------------------------------------------	*/
@@ -102,11 +112,5 @@ public class Person extends ConcertEntity	{
 	 * A person's phone number represented by a PhoneNumber object.
 	 */
 	private PhoneNumber phoneNumber;
-	
-	/**
-	 * A person's identification number represented by an alphanumeric code stored in a String.
-	 */
-	private String id;
-
 
 }	/*	End of CLASS:	Person.java			*/
