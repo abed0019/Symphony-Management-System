@@ -27,8 +27,7 @@ public class Composition extends ConcertEntity{
 	 * @param composer the Composer of the Composition
 	 */
 	public Composition(String id, String name, String composer) {
-		setID(id);
-		setName(name);
+		super(id, name);
 		setComposer(composer);
 		movementList = new ArrayList<Movement>();
 	}
