@@ -20,9 +20,9 @@ public abstract class Concert extends ConcertEntity{
 	 * @param name as a String from ConcertEntity class
 	 */
 	public Concert(Conductor conductor, Soloist soloist, String id, String name){
+		super(id, name);
 		this.soloist = soloist;
 		this.conductor = conductor;
-		super(id, name);
 		compositionPlaylist = new ArrayList<>();
 	}//end Concert()
 
@@ -77,7 +77,8 @@ public abstract class Concert extends ConcertEntity{
 	@Override  
 	public String toString() {
 		return "\n[Concert Name: " + super.getName() + ", Concert ID: " + super.getID() 
-				+ ", Conductor: " + conductor + ", Soloist" + soloist + "]";
+				+ ", Conductor: " + conductor + ", Soloist" + soloist + ", Composition: "
+				+ compositionPlaylist + "]";
 	}
 
 	/* HELPER METHODS	--------------------------------------------------	*/
