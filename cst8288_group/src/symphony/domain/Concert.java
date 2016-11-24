@@ -1,63 +1,72 @@
 package symphony.domain;
 import java.util.*;
-import java.util.Date;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
+
 
 /**
  * Concert Class
- * This class identifies the type of concert and the concert date.
+ * This class identifies the type of concert.
  * @author    My My Ngo
  * @version   1.0.0 October 25, 2016
  */
 
-public class Concert {
+public abstract class Concert extends ConcertEntity{
 
-	private static String concertNumber = "Concert99";
-	java.util.Date aDate = new java.util.Date();	
-	java.sql.Timestamp concertDate;
-	
-	public Concert(String concertNumber){
-		setConcertNumber(concertNumber);	
-		concertDate = new java.sql.Timestamp(aDate.getTime());
-	}
-	
+	/* CONSTRUCTORS	--------------------------------------------------	*/
+	/**
+	 * Default constructor for the required parameters.
+	 * @param conductor as a Conductor object
+	 * @param soloist as a Soloist object
+	 * @param id as a String from ConcertEntity class
+	 * @param name as a String from ConcertEntity class
+	 */
+	public Concert(Conductor conductor, Soloist soloist, String id, String name){
+		this.soloist = soloist;
+		this.conductor = conductor;
+		super(id, name);
+		compositionPlaylist = new ArrayList<>();
+	}//end Concert()
 
+	
+	public void addComposition(Composition composition){
+		compositionPlaylist.add(composition);
+	}//end addComposition()
+
+	
 	/* ACCESSORS	-----------------------------------------------------	*/
 	/**
-	 * Concert ID getter method
-	 * @return Concert number as a String
+	 * Conductor getter method
+	 * @return conductor as a Conductor object
 	 */
-	public String getConcertNumber(){
-		return getConcertNumber();
-	}//end getConcertNumber()
-	
-	/**
-	 * Concert date getter method
-	 * @return Concert date(s) as a Date object
-	 */
-	public java.sql.Timestamp getConcertDate(){
-		return concertDate;
-	}//end getConcertDates()
+	public Conductor getConductor(){
+		return conductor;
+	}//end getConductor()
 
+	/**
+	 * Soloist getter method
+	 * @return soloist as a Soloist object
+	 */
+	public Soloist getSoloist(){
+		return soloist;
+	}//end getSoloist()
+
+	//put getter and setter for composition arraylist, soloist,
 
 	/* MODIFIERS	-----------------------------------------------------	*/
 	/**
-	 * Concert Number setter method - sets concert id with a String parameter
-	 * @param concertNumber - Concert identifier (combination of letters and numbers)
+	 * Conductor setter method
+	 * @param conductor as a Conductor object
 	 */
-	public void setConcertNumber(String concertID){
-		concertNumber = concertID;
-	}//end concertNumber()
-
+	public void setConductor(Conductor conductor){
+		this.conductor = conductor;
+	}//end setConductor()
 
 	/**
-	 * Concert Date setter method - sets concert date with a Date object parameter
-	 * @param concertDate - Date of when concert opens.  
+	 * Soloist setter method
+	 * @param soloist as a Soloist object
 	 */
-	public void setConcertDate(java.sql.Timestamp date){
-		concertDate = date;
-	}//end setConcertDate()
+	public void setSoloist(Soloist soloist){
+		this.soloist = soloist;
+	}//end setSoloist()
 
 
 	/*	NORMAL BEHAVIOR -------------------------------------------------	*/
@@ -65,10 +74,10 @@ public class Concert {
 	 * Overriding the parent toString method to a meaningful String
 	 * @return Concert number and concert date as a meaningful String
 	 */
-	@Override
+	@Override  
 	public String toString() {
-		return "\n[Concert Number: " + concertNumber 
-				+ ", Date: " + concertDate + "]";
+		return "\n[Concert Name: " + super.getName() + ", Concert ID: " + super.getID() 
+				+ ", Conductor: " + conductor + ", Soloist" + soloist + "]";
 	}
 
 	/* HELPER METHODS	--------------------------------------------------	*/
@@ -87,8 +96,28 @@ public class Concert {
 	 */
 	public static void main(String[] args) {
 		//Test output
-		Concert concert = new Concert(concertNumber);
-		System.out.println(concert);
+		/*Concert concert = new Concert(concertNumber);
+		System.out.println(concert);*/
 	}//end main
 
-}	/*	End of CLASS:	Concert.java			*/
+
+	/* ATTRIBUTES	-----------------------------------------------------	*/
+	/**
+	 * Soloist for a concert
+	 */
+	private Soloist soloist;
+	
+	/**
+	 * Conductor for a concert
+	 */
+	private Conductor conductor;
+	
+	/**
+	 * Array of compositions for the concert
+	 */
+	private ArrayList<Composition> compositionPlaylist;
+	
+	
+
+
+}/****   END Concert Class  **********/
