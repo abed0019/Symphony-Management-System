@@ -7,40 +7,36 @@ import java.util.ArrayList;
 import java.util.GregorianCalendar;
 
 /**
- * Description of this class.
- * @author    Kathleen McNulty
- * @version   1.0.0 Date
+ * Concert Season class is a Concert Entity
+ * <br>Will be updated later today with JavaDocs
+ * @author    Kathleen McNulty, adjusted by Ash-Lee Hommy
+ * @version   1.0.0 
  */
-public class ConcertSeason	{
+public class ConcertSeason extends ConcertEntity{
 
 
 	/* CONSTRUCTORS	--------------------------------------------------	*/
 	/* TODO:	Place constructors here.												*/
-	public ConcertSeason(String seasonName){
-		this.seasonName = seasonName;
-			
-			concertSeasonDate = new java.sql.Timestamp(aDate.getTime());
-		concertList = new ArrayList<Concert>();
-		this.length = 0;
+	public ConcertSeason(){
+		super("id", "name");
+		openingDate = new java.sql.Date(0);
+		concertList = new ArrayList<ScheduledConcert>();
+		length = 0;
 	}
-	public ConcertSeason(String seasonName, int length){
-		this.seasonName = seasonName;
-		concertList = new ArrayList<Concert>();
-		this.length = 0;
-	}
-	public ConcertSeason(String seasonName, java.sql.Timestamp concertSeasonDate, int length, ArrayList<Concert> concertList){
-		this.concertSeasonDate=concertSeasonDate; 
+
+	public ConcertSeason(Date openingDate, int length, ArrayList<ScheduledConcert> concertList){
+		super("CSid", "CSname");
+		this.openingDate = openingDate;
 		this.length=length; 
 		this.concertList=concertList; 
-		this.seasonName = seasonName;
 	}
 
 	/* ACCESSORS	-----------------------------------------------------	*/
 	/* TODO:	Place accessors here.													*/
-	public java.sql.Timestamp getOpeningDate(){
-		return concertSeasonDate;
+	public Date getOpeningDate(){
+		return openingDate;
 	}
-	public ArrayList<Concert>getConcertList(){
+	public ArrayList<ScheduledConcert>getConcertList(){
 		return concertList;
 	}
 	public int getLength(){
@@ -52,37 +48,19 @@ public class ConcertSeason	{
 	/* MODIFIERS	-----------------------------------------------------	*/
 	/* TODO:	Place modifier/mutator methods here.	
 	 */
-	public void setOpeningDate(java.sql.Timestamp concertSeasonDate){
-		this.concertSeasonDate=concertSeasonDate; 
+	public void setOpeningDate(Date openingDate){
+		this.openingDate = openingDate;
 	}
 	public void setLength(int length){
 		this.length=length; 
 	}
-	public void setConcertList(ArrayList<Concert> concertList){
+	public void setConcertList(ArrayList<ScheduledConcert> concertList){
 		this.concertList=concertList; 
 	}
 
-	public void addConcert(Concert concertToAdd){
+	public void addConcertToSeason(ScheduledConcert concertToAdd){
 		this.concertList.add(concertToAdd);//adding a new concert to the list
 	}
-	/**
-	 * @return the seasonName
-	 */
-	public String getSeasonName() {
-		return seasonName;
-	}
-	/**
-	 * @param seasonName the seasonName to set
-	 */
-	public void setSeasonName(String seasonName) {
-		this.seasonName = seasonName;
-	}
-	//CONTEMPLATE BUSINESS RULES FOR CONDUCTOR
-
-	/*	NORMAL BEHAVIOR -------------------------------------------------	*/
-	/* TODO:	Place public behavior here.											*/
-
-
 
 	/* HELPER METHODS	--------------------------------------------------	*/
 	/* TODO:	Place helper methods here.	
@@ -94,31 +72,17 @@ public class ConcertSeason	{
 	}
 	@Override
 	public String toString() {
-		return "\n[ConcertSeason:  " + seasonName 
-				+ ", Opening Date: " + this.concertSeasonDate
-				+ ", length (In days) : " + this.length
+		return "\n[ConcertList:  " + concertList 
+				+ ", Opening Date: " + openingDate
+				+ ", length (In days) : " + length
 				+ " ]";
 	}
 
 	/* ATTRIBUTES	-----------------------------------------------------	*/
 	
-	private ArrayList<Concert>concertList;
+	private ArrayList<ScheduledConcert>concertList;
 	private int length;
-	private String seasonName;
-	java.util.Date aDate = new java.util.Date();	
-	java.sql.Timestamp concertSeasonDate;
+	java.sql.Date openingDate;
 
-	//uncomment lines below to test
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		/*System.out.println("Testing Concert season");
-		ConcertSeason season = new ConcertSeason("test season");
-		ConcertSeason fall = new ConcertSeason("fall");
-		ConcertSeason winter = new ConcertSeason("winter");
-		System.out.println(season);
-		System.out.println(fall);*/
-		Ticket ticket = new Ticket();
-		ticket.displayTicket();
-	}
 }	/*End of CLASS:	Skeleton.java*/
 
