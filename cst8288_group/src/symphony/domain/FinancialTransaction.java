@@ -24,10 +24,10 @@ public class FinancialTransaction
 		timestamp2="";
 	}
 /**
- * Parametized constructor
- * @param description
- * @param accountno
- * @param timestamp2
+ * Parameterized constructor
+ * @param description- text description of financial transaction
+ * @param accountno- client account number financial transaction
+ * @param timestamp2- a formated string for when the financial transaction occured
  */
 	public FinancialTransaction(String description, int accountno, String timestamp2){
 		this.description=description;
