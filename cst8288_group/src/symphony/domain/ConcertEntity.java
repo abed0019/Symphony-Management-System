@@ -10,6 +10,15 @@ package symphony.domain;
 public abstract class ConcertEntity {
 
 	/* CONSTRUCTORS	--------------------------------------------------	*/
+	/**
+	 * Overloaded constructor to set name and id
+	 * @param id the unique ID
+	 * @param name the name, can be a String or Name Object
+	 */
+	ConcertEntity(String id, Object name) {
+		this.id = id;
+		this.name = name;
+	}
 	
 
 	/* ACCESSORS	-----------------------------------------------------	*/
@@ -61,11 +70,12 @@ public abstract class ConcertEntity {
 	/**
 	 * ID represented as a String (mix of numbers of letters)
 	 */
-	protected String id = "";
+	protected String id;
 	/**
-	 * Name represented as a String
+	 * Name represented as an Object (can be a String or a Name Object)
+	 * 
 	 */
-	protected String name = "";
+	protected Object name;
 
 
 }	/*	End of CLASS:	ConcertEntity.java			*/
