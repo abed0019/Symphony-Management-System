@@ -1,22 +1,14 @@
 package symphony.domain;
 
-import sun.util.calendar.Gregorian;
 
-//http://stackoverflow.com/questions/21667793/java-simple-accounting-program
-//company code
-//general ledger account number
-//80 byte description encode information in here so you can trance back maybe seat number and venue to trace back to my system to find out where it was generated
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class FinancialTransaction 
 {
-
-	private String description; //This will likely be a couple of things so maybe it's an array instead? 
-	private int accountno;
-	private Gregorian timestamp;
-	private double credit; 
-	private double debit; 
-	private double  test;
-
+	/* CONSTRUCTORS	--------------------------------------------------	*/
+	/* TODO:	Place constructors here.												*/
 
 	public FinancialTransaction()
 	{ 
@@ -28,11 +20,11 @@ public class FinancialTransaction
 	public FinancialTransaction(String description, int accountno, double balance, Customer cust){
 		this.description=description;
 		this.accountno = accountno;
-		/*this.balance = balance;
-		this.timestamp=timestamp;
-		this.channel=channel; */
+		
 	}
 
+	/* ACCESSORS	-----------------------------------------------------	*/
+	/* TODO:	Place accessors here.													*/
 
 	public String getDescription(){
 		return description; 
@@ -41,62 +33,40 @@ public class FinancialTransaction
 	public int getAccountNo(){
 		return accountno;
 	}
-	/*public double getBalance(){
-		return balance;
-	}
-	public double getTaxRate(){
-		return taxrate;
 
-	}
-	public String getChannel(){
-		return channel; 
+	public String getTimeStamp(){
+		String time=sdf.format(timestamp);
+		return time;
 	}
 
-	public void setChannel(){
-		this.channel=channel; 
-	}*/
-	public void setDescription(String description){//This will be seat number and client info
+	/* MODIFIERS	-----------------------------------------------------	*/
+	/* TODO:	Place modifier/mutator methods here.	
+	 */
+	
+	public void setDescription(String description){
 		this.description=description; 
 	}
-	public void setAccountNo(int id){
+	public void setAccountNo(int accountno){
 		this.accountno = accountno;
 	}
-	/*public void setBalance(double balance){
-		this.balance=balance;
-	}
-	public void settaxrate(double taxrate){//Maybe obtain province of venue? Have a getter for that and then have a bunch of if statements for each province
-		this.taxrate = taxrate;
-	}*/
 
-	public void setTimeStamp(Gregorian timestamp){//How do you generate a timestamp
+	public void setTimeStamp(Timestamp timestamp){
 		this.timestamp = timestamp;
+		
 	}
 
+	/* ATTRIBUTES	-----------------------------------------------------	*/
 
-	public Gregorian getTimeStamp(){
-		return timestamp;
-	}
 
-	/*public double debit (double amount){//replace debit with the ticket price... refund amount
-		return balance -= amount;
-	} 
-
-	public double credit (double amount){//replace amount with ticket price
-		return balance += amount;
-	}*/
-	Venue venue=new Venue();
+	private String description; 
+	private int accountno;
+	 private static final SimpleDateFormat sdf = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss");
+	 Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+	private double credit; 
+	private double debit; 
+	
 }
 
-/*
-Description Traceability Venue Seat Number and Datetimestamp....Which Customer Name and ID getname getID
-
-Account number (General Ledger Account Number)Like a bank account number
-
-Debit or Credit to track financial transaction
-
-Specify user... Teller online channel of service 
-
- */
 
 
 
