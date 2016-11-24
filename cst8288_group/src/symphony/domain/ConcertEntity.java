@@ -20,6 +20,10 @@ public abstract class ConcertEntity {
 		this.name = name;
 	}
 	
+	ConcertEntity() {
+		
+	}
+	
 
 	/* ACCESSORS	-----------------------------------------------------	*/
 	/**
