@@ -26,7 +26,7 @@ public class TicketIssuance {
 	/* ACCESSORS	-----------------------------------------------------	*/
 	
 	/**
-	 * This obtains the method of payment
+	 * This method btains the method of payment
 	 * @return methodofpayment
 	 */
 	public String getMethodofPayment(){
@@ -34,7 +34,7 @@ public class TicketIssuance {
 	} 
 
 	/**
-	 * This obtains the a flag to indicate whether or not a ticket should be sold
+	 * This method obtains the a flag to indicate whether or not a ticket should be sold
 	 * @return sellTicket
 	 */
 	public boolean getTicketStatus(){
@@ -42,7 +42,7 @@ public class TicketIssuance {
 	}
 
 	/**
-	 * Thi obtains a flag to indicate a concert at a particular venue is sold out
+	 * This method obtains a flag to indicate a concert at a particular venue is sold out
 	 * @return soldOut
 	 */
 	public boolean getSoldOut(){
@@ -52,7 +52,7 @@ public class TicketIssuance {
 	/* MODIFIERS	--------------------------------------------------	*/
 	
 	/**
-	 * This creates or updates a flag to indicate whether or not a ticket should be sold
+	 * This method creates or updates a flag to indicate whether or not a ticket should be sold
 	 * @param sellTicket
 	 */
 	public void setTicketStatus(boolean sellTicket){
@@ -61,7 +61,7 @@ public class TicketIssuance {
 	}
 	
 	/**
-	 * This creates or updates a String to indicate the method of payment
+	 * This method creates or updates a String to indicate the method of payment
 	 * @param methodofpayment
 	 */
 	public void setMethodofPayment(String methodofpayment){
@@ -69,7 +69,7 @@ public class TicketIssuance {
 	}
 	
 	/**
-	 * This creates or updates a flag to indicate when a concert is sold out
+	 * This method creates or updates a flag to indicate when a concert is sold out
 	 * @param soldOut
 	 */
 	public void setSoldOut(boolean soldOut){
@@ -79,7 +79,7 @@ public class TicketIssuance {
 	/* NORMAL BEHAVIOR	-----------------------------------------------------	*/
 	
 	/**
-	 * This creates or updates a flags to indicate whether or not a ticket should be sold, a concert is sold out
+	 * This method creates or updates a flags to indicate whether or not a ticket should be sold, a concert is sold out
 	 * 
 	 */
 	public void sellTicket(){
@@ -99,9 +99,13 @@ public class TicketIssuance {
 	}
 	
 	/* ATTRIBUTES	--------------------------------------------------	*/
+	/**This flag indicates when a concert is sold out**/
 	public boolean soldOut; 
+	/**This flag indicates the ticket can be sold because capacity hasn't been reached yet**/
 	public boolean sellTicket; 
+	/**This is the method of payment when a ticket is issued**/
 	private String methodofpayment; 
+	/**This object is used to sell a ticket**/
 	ScheduledConcert scheduledConcert = new ScheduledConcert();
 	/** This variable tracks the number of tickets sold in for each concert**/
 	private int ticketSold;
