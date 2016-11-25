@@ -40,7 +40,7 @@ public class Test_ConcertEntity extends TestCase {
 		assertEquals("\t\tTest_ConcertEntity.testAccessors: Expecting Composition name to be MovementComposition", str, composition.getName());
 		
 		str = "CompMov3id";
-		assertEquals("\t\tTest_ConcertEntity.testAccessors: Expecting Composition ID to be CompMov3id", str, composition.getID());
+		assertTrue("\t\tTest_ConcertEntity.testAccessors: Expecting Composition ID to be represented as a String", composition.getID() instanceof String);
 
 	}
 
@@ -60,7 +60,7 @@ public class Test_ConcertEntity extends TestCase {
 		assertEquals("\t\tTest_ConcertEntity.testAccessors: Expecting Composition name to be MovementComposition", str, composition.getName());
 		
 		str = "CompMov3id";
-		assertEquals("\t\tTest_ConcertEntity.testAccessors: Expecting Composition ID to be CompMov3id", str, composition.getID());
+		assertTrue("\t\tTest_ConcertEntity.testAccessors: Expecting Composition ID to be represented as a String", composition.getID() instanceof String);
 
 	}
 

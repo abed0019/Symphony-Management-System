@@ -1,8 +1,12 @@
 package symphony.domain;
 
+
 /**
  * Concert Entity Abstract class - factored Name and ID shared by many classes
  * <br> Parent class to any Object that has name(String or Name object) and id
+ * 
+ * Inner class UniqueID by Kathleen McNulty, Auto Generate ID with Singleton Pattern
+ * Ensures each ID is unique
  * 
  * @author    Ash-Lee Hommy 040840815
  * @version   1.0.0 November, 2016
@@ -11,12 +15,13 @@ public abstract class ConcertEntity {
 
 	/* CONSTRUCTORS	--------------------------------------------------	*/
 	/**
-	 * Overloaded constructor to set name and id
-	 * @param id the unique ID
+	 * Overloaded constructor to set name and id with Singleton Pattern
+	 * @param id the ID + UID
 	 * @param name the name, can be a String or Name Object
 	 */
 	ConcertEntity(String id, Object name) {
-		this.id = id;
+		int uid = UniqueID.getInstance();
+		this.id = id+uid;
 		this.name = name;
 	}
 	
@@ -80,6 +85,17 @@ public abstract class ConcertEntity {
 	 * 
 	 */
 	protected Object name;
+	
+	static class UniqueID{
+		private static int uid = 0;
+		public static int getInstance(){
+			uid++;
+			return uid;
+		}
+	}
 
+	
 
 }	/*	End of CLASS:	ConcertEntity.java			*/
+
+
