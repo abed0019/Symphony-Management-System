@@ -128,6 +128,7 @@ public class FinancialTransaction
 	private String description;
 /**This variable is the account number of the client**/
 	private int accountno;
+	/**This variable is a formated timestamp **/
 	 private static final SimpleDateFormat sdf = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss");
 	 /**This object obtains an unformatted timestamp**/
 	 Timestamp timestamp = new Timestamp(System.currentTimeMillis());
