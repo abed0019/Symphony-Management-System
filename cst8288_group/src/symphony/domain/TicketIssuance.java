@@ -98,6 +98,7 @@ public class TicketIssuance {
 			
 		}
 	}
+	public void refundTicket(){}
 	
 	/* ATTRIBUTES	--------------------------------------------------	*/
 	/**This flag indicates when a concert is sold out**/
