@@ -29,60 +29,102 @@ public class Venue	extends ConcertEntity{ //shoudld extend concertEntity
 		this.maxCapacity = maxCapacity;
 	}
 
+	
+	
 	/* ACCESSORS	-----------------------------------------------------	*/
 	/**
 	 * @return Address of the venue
 	 */
+	
+	
+	
 	public Address getLocation()
 	{
 		return location;
 	}
 
+	
+	
 	/**
 	 * @return String containing the venue name
 	 */
 	
 	
+	public String getLocationName()
+	{
+		return locationName;
+	}
+	
+	
+	
 	/**
 	 * @return int representing the maximum capacity of the venue
 	 */
+	
+	
+	
 	public int getMaxCapacity()
 	{
 		return maxCapacity;
 	}
+	
+	
+	
 	/**
 	 * @return int represents the total tickets sold for a particular venue
 	 */
+	
+	
+	
 	public int getTotalTicketSale()
 	{
 		return totalTicketSale;
 	}
+	
+	
 
 	/* MODIFIERS	-----------------------------------------------------	*/
 	/**
 	 * @param location The address of the venue
 	 */
+	
+	
+	
 	public void setLocation(Address location)
 	{
 		this.location = location;
 	}
+	
+	
 	
 	/**
 	 * @param locationName The name of the venue
 	 */
 	
 	
+	public void setLocationName(String locationName)
+	{
+		this.locationName = locationName;
+	}
+	
+	
 	/**
 	 * @param maxCapacity The maximum capacity of the venue
 	 */
+	
+	
 	public void setMaxCapacity(int maxCapacity)
 	{
 		this.maxCapacity = maxCapacity;
 	}
+	
+	
 	/**
 	 * 
 	 * @param totalTicketSale Total number of tickets sold for a particular venue
 	 */
+	
+	
 	public void setTotalTicketSale(int totalTicketSale)
 	{
 		this.totalTicketSale = totalTicketSale;
@@ -93,6 +135,8 @@ public class Venue	extends ConcertEntity{ //shoudld extend concertEntity
 	/**
 	 * @return The venue name, location, and max capacity variables respectively
 	 */
+	
+	
 	public String toString()
 	{
 		return  "[Venue: " + super.getName() + 

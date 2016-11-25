@@ -30,6 +30,10 @@ public class Soloist extends Person {
 		super(name, homeAddress, phoneNumber, id);
 	}
 
+	
+	
+
+
 	/* ACCESSORS	-----------------------------------------------------	*/
 	
 	
@@ -42,12 +46,16 @@ public class Soloist extends Person {
 	
 	
 	
-	/**public String getSoloistID() {
+	public String getSoloistID() {
 		
 		return this.soloistID;
 		
 	}
-*/
+
+
+
+
+
 
 	/**
 	 * Soloist expertise getter method -  returns the area of expertise of a soloist ( e.g, sax player, fluist )
@@ -71,7 +79,7 @@ public class Soloist extends Person {
 	
 	public Date getlastPerformedDate(){
 		
-		return this.getlastPerformedDate();
+		return this.lastPerformedDate;
 		
 	}
 	
