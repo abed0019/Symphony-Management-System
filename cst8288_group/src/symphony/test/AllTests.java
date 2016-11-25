@@ -32,8 +32,8 @@ public class AllTests extends TestCase {
 		suite.addTest(Test_Name.suite());
 		suite.addTest(Test_Person.suite());
 		suite.addTest(Test_PhoneNumber.suite());
-		//suite.addTest(Test_Soloist.suite());
-		//suite.addTest(Test_Venue.suite());
+		suite.addTest(Test_Soloist.suite());
+		suite.addTest(Test_Venue.suite());
 		
 		return suite;
 	}
