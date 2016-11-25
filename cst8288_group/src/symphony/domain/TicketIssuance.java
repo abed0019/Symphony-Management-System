@@ -80,7 +80,7 @@ public class TicketIssuance {
 	
 	/**
 	 * This method creates or updates a flags to indicate whether or not a ticket should be sold, a concert is sold out
-	 * 
+	 * and sets the credit amount of the financial transaction (the price of the ticket)
 	 */
 	public void sellTicket(){
 		if (scheduledConcert.getVenue().getMaxCapacity()== scheduledConcert.getVenue().getTotalTicketSale()){
@@ -93,6 +93,7 @@ public class TicketIssuance {
 			sellTicket=true;
 			ticketSold++;
 			scheduledConcert.getVenue().setTotalTicketSale(ticketSold);
+			fincredit.setCredit(ticket.getTicketPrice());
 			
 			
 		}
@@ -109,4 +110,8 @@ public class TicketIssuance {
 	ScheduledConcert scheduledConcert = new ScheduledConcert();
 	/** This variable tracks the number of tickets sold in for each concert**/
 	private int ticketSold;
+	/** If there is a ticket issued there is a financial transaction object**/
+	FinancialTransaction fincredit=new FinancialTransaction();
+	/**If there is a ticket issued a ticket object is instantiated **/
+	Ticket ticket=new Ticket();
 }
