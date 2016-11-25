@@ -111,7 +111,7 @@ public class TicketIssuance {
 	/** This variable tracks the number of tickets sold in for each concert**/
 	private int ticketSold;
 	/** If there is a ticket issued there is a financial transaction object**/
-	FinancialTransaction fincredit=new FinancialTransaction();
+	public FinancialTransaction fincredit=new FinancialTransaction();
 	/**If there is a ticket issued a ticket object is instantiated **/
-	Ticket ticket=new Ticket();
+	public Ticket ticket=new Ticket();
 }
