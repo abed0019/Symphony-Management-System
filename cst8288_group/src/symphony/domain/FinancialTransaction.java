@@ -137,7 +137,6 @@ public class FinancialTransaction
 	 /**This variable is a debit activity amount**/
 	private double debit; 
 
-	private int ticketSold;
 	
 }
 

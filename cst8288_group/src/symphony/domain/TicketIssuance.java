@@ -12,7 +12,8 @@ public class TicketIssuance {
 	/**
 	 * Default Constructor
 	 */
-	public TicketIssuance(){}
+	public TicketIssuance(){
+	}
 	/**
 	 * Parameterized constructor 
 	 * @param ticket- Ticket for a concert at a venue
@@ -90,7 +91,10 @@ public class TicketIssuance {
 		else{ 
 			soldOut=false;
 			sellTicket=true;
-			scheduledConcert.getVenue().setTotalTicketSale(1);
+			ticketSold++;
+			scheduledConcert.getVenue().setTotalTicketSale(ticketSold);
+			
+			
 		}
 	}
 	
@@ -99,4 +103,6 @@ public class TicketIssuance {
 	public boolean sellTicket; 
 	private String methodofpayment; 
 	ScheduledConcert scheduledConcert = new ScheduledConcert();
+	/** This variable tracks the number of tickets sold in for each concert**/
+	private int ticketSold;
 }
