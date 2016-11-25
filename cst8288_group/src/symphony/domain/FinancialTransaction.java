@@ -124,8 +124,9 @@ public class FinancialTransaction
 
 
 
-
-	private String description; 
+/**This variable is a text description of the transaction**/
+	private String description;
+/**This variable is the account number of the client**/
 	private int accountno;
 	 private static final SimpleDateFormat sdf = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss");
 	 /**This object obtains an unformatted timestamp**/
