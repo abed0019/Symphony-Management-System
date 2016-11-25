@@ -77,6 +77,9 @@ public class FinancialTransaction
 	public double getDebit() {
 		return debit;
 	}
+	
+	
+
 	/* MODIFIERS	-----------------------------------------------------	*/
 
 	/**This updates or creates the description of the finacial transaction
@@ -116,15 +119,24 @@ public class FinancialTransaction
 		this.debit = debit;
 	}
 
+
 	/* ATTRIBUTES	-----------------------------------------------------	*/
+
+
+
 
 	private String description; 
 	private int accountno;
 	 private static final SimpleDateFormat sdf = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss");
+	 /**This object obtains an unformatted timestamp**/
 	 Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+	 /**This variable is a formated String representation of a timesttamp**/
 	 String timestamp2;
+	 /**This variable is a credit activity amount**/
 	private double credit; 
+	 /**This variable is a debit activity amount**/
 	private double debit; 
+
 	private int ticketSold;
 	
 }

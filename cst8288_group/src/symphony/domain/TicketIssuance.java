@@ -90,7 +90,7 @@ public class TicketIssuance {
 		else{ 
 			soldOut=false;
 			sellTicket=true;
-			scheduledConcert.getVenue().getTotalTicketSale();
+			scheduledConcert.getVenue().setTotalTicketSale(1);
 		}
 	}
 	
