@@ -62,7 +62,21 @@ public class FinancialTransaction
 		String timestamp2=sdf.format(timestamp);
 		return timestamp2;
 	}
+/**
+ * This method provides a credit activity amount
+ * @return credit
+ */
+	public double getCredit() {
+	return credit;
+}
+	/**
+	 * This method provides a debit activity amount
+	 * @return debit
+	 */
 
+	public double getDebit() {
+		return debit;
+	}
 	/* MODIFIERS	-----------------------------------------------------	*/
 
 	/**This updates or creates the description of the finacial transaction
@@ -86,9 +100,23 @@ public class FinancialTransaction
 		this.timestamp = timestamp;
 		
 	}
+	
+	/**
+	 * This creates or updates a credit activity amount to be used for a general ledger
+	 * @param credit
+	 */
+	public void setCredit(double credit) {
+		this.credit = credit;
+	}
+	/**
+	 * This creates or updates a debit activity amount to be used for a general ledger
+	 * @param debit
+	 */
+	public void setDebit(double debit) {
+		this.debit = debit;
+	}
 
 	/* ATTRIBUTES	-----------------------------------------------------	*/
-
 
 	private String description; 
 	private int accountno;
