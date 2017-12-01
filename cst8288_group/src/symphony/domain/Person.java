@@ -2,7 +2,7 @@ package symphony.domain;
 
 /**
  * Person is a class that contains the most basic information about an individual.
- * @author    Chase Thorne
+ * @author    Zobayed Abedin
  * @version   1.0.1 November 8, 2016
  */
 public class Person extends ConcertEntity	{

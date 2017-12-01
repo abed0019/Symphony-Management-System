@@ -4,7 +4,7 @@ package symphony.domain;
  * This class issues a ticket if there is capacity
  * It has a ticket, ticket status to determine whether or not a concert at a particular venue is sold out and flags concerts as sold out
  * 
- * @author Kathleen McNulty, updated by Adam Shalla & Ash-Lee Hommy
+ * @author Kathleen McNulty,Zobayed Abedin updated by Adam Shalla & Ash-Lee Hommy
  *
  */
 public class TicketIssuance {

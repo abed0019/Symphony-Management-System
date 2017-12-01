@@ -3,7 +3,7 @@ package symphony.domain;
 /**
  * <b>Address Class</b>
  * <br>An address contains the street number, name, apartment, province or state, and postal or zip code of a location.
- * @author    Chase Thorne
+ * @author   Zobayed Abedin
  * @version   1.0.1 November 8, 2016
  */
 

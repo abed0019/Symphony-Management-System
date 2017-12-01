@@ -57,8 +57,8 @@ public class ConcertManagement{
 	/**
 	 *   Schedules a concert under a concert season.  
 	 *******************************************************************************************/	
-	public void scheduleConcert (ConcertSeason concertSeason, Concert concert,Venue venue) {
-		ScheduleConcert scheduleConcert = new ScheduleConcert(concertSeason, concert, venue);
+	public void scheduledConcert (ConcertSeason concertSeason, Concert concert,Venue venue) {
+		ScheduledConcert scheduleConcert = new ScheduledConcert();
 		System.out.println(scheduleConcert);
 
 	}//end scheduleConcert ()
@@ -136,10 +136,10 @@ public class ConcertManagement{
 		openingDate = new java.sql.Timestamp(aDate.getTime());
 		ArrayList<Concert> concertList = new  ArrayList<Concert>();
 		concertList.add(concert);
-		ConcertSeason concertSeason = new ConcertSeason("Winter2016", openingDate, 10, concertList);
+		ConcertSeason concertSeason = new ConcertSeason();
 
 		ConcertManagement concertMgmt = new ConcertManagement();
-		concertMgmt.scheduleConcert(concertSeason, concert, venue);
+		concertMgmt.scheduledConcert(concertSeason, concert, venue);
 
 
 	}//main

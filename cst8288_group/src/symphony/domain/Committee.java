@@ -4,7 +4,7 @@ package symphony.domain;
  * Committee Class
  * This class represents the Symphony Management Committee.  
  * It includes 4 people: the chairman, vice-chairman, secretary, and treasurer.
- * Author    Adam Shalla
+ * Author    Zobayed Abedin
  * @version   1.0.0	2016-10-26
  */
 

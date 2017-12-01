@@ -4,7 +4,7 @@ package symphony.domain;
  * This class represents a ticket.
  * It has a concert that is for, a price, and a unique ID
  * 
- * @author Kathleen McNulty, updated by Adam Shalla & Ash-Lee Hommy
+ * @author Kathleen McNulty,Zobayed Abedin updated by Adam Shalla & Ash-Lee Hommy
  *
  */
 public class Ticket {
